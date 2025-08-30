@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c87ofyvhdxi7s"]
+
+[ext_resource type="Script" uid="uid://h1yj51g1cop0" path="res://script/player.gd" id="1_3x5gi"]
+[ext_resource type="Texture2D" uid="uid://ccigagpmywj1c" path="res://Image/Character_Profile/tex_support_card_30028.png" id="2_atds7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x5gi"]
+size = Vector2(93, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atds7"]
+size = Vector2(95, 125)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_3x5gi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.210981, 0.210981)
+texture = ExtResource("2_atds7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_3x5gi")
+
+[node name="Dialog_interact" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Dialog_interact"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_atds7")
+debug_color = Color(0.970405, 0, 0.454941, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,7 @@
+extends Node
+
+signal display_dialog(key_j)
+signal display_char_dialog(key_j)
+signal answer(contenner)
+signal give_item(item_name)
+signal kill_item()

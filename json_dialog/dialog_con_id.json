@@ -1,0 +1,34 @@
+{
+    "content":{
+        "RU_01_01":{
+            "char_in":["rudolf","teio","mcqueen"],
+            "dialog":[
+                {"char":"rudolf", "line":"As president, I promise a very STABLE administration."},
+                {"char":"teio", "line":"Stable like steady... or STABLE like the barn?"},
+                {"char":"rudolf", "line":"Both. We're horses."},
+                {"char":"mcqueen", "line":"...Classic Symboli dad joke."}
+            ]
+        },
+        "RU_01_02":{
+            "char_in":["rudolf","teio","mcqueen"],
+            "dialog":[
+                {"char":"teio", "line":"New meeting, new goals—who's leading?"},
+                {"char":"rudolf", "line":"As president, I'll trot us through the agenda."},
+                {"char":"mcqueen", "line":"Agenda item one: mandatory snack break."},
+                {"char":"teio", "line":"Seconded. Carrots for morale."}
+            ]
+        },
+        "RU_02_01":{
+            "char_in":["rudolf"],
+            "dialog":[
+                {"char":"rudolf", "line":"Any way Here the key"},
+                {"char":"rudolf", "line":"keep it to you and it will help you later"}
+            ]
+        },
+        "fin":{
+            "char_in":[],
+            "dialog":[]
+        }
+        
+    }
+}
