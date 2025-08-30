@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bg4hk8eir30fo"]
+[gd_scene load_steps=24 format=4 uid="uid://bg4hk8eir30fo"]
 
 [ext_resource type="Script" uid="uid://oiyqwgk84rec" path="res://script/World_base_script/world.gd" id="1_lccqd"]
 [ext_resource type="Texture2D" uid="uid://bm2sourlg4xqm" path="res://Asset/Tiles/Mansion.png" id="2_yyhej"]
@@ -319,7 +319,7 @@ sources/1 = SubResource("TileSetAtlasSource_lccqd")
 size = Vector2(21.25, 30.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mit0b"]
-size = Vector2(25.5, 27.75)
+size = Vector2(14.75, 36.875)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e32y8"]
 radius = 18.0
@@ -330,6 +330,9 @@ size = Vector2(6.0625, 35.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lccqd"]
 size = Vector2(24, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyhej"]
+size = Vector2(25, 32)
 
 [node name="world_1" type="Node2D"]
 script = ExtResource("1_lccqd")
@@ -353,8 +356,8 @@ scale = Vector2(0.0884617, 0.132239)
 texture = ExtResource("4_vddpc")
 
 [node name="Key" type="Sprite2D" parent="obj"]
-position = Vector2(861, 450)
-rotation = -0.0189403
+position = Vector2(872, 487)
+rotation = 1.76856
 scale = Vector2(0.612304, 0.109374)
 texture = ExtResource("5_cu5ai")
 
@@ -373,7 +376,7 @@ position = Vector2(437, 491)
 dialog_key = "OBJ_Main_door_01"
 
 [node name="CollisionShape2D" parent="interact_area/Interact_Dialog_Area" index="0"]
-position = Vector2(423, -63)
+position = Vector2(454.625, -2.5625)
 shape = SubResource("RectangleShape2D_mit0b")
 
 [node name="Charecter_Dialog_Area2" parent="interact_area" instance=ExtResource("6_kfupk")]
@@ -408,6 +411,13 @@ connect_scene = "living_room"
 position = Vector2(763, 301.5)
 shape = SubResource("RectangleShape2D_lccqd")
 
+[node name="Screen_tranfer_Trigger_Area3" parent="." instance=ExtResource("12_g481w")]
+connect_scene = "cellar"
+
+[node name="CollisionShape2D" parent="Screen_tranfer_Trigger_Area3" index="0"]
+position = Vector2(859.5, 428)
+shape = SubResource("RectangleShape2D_yyhej")
+
 [node name="Enter_mark_point" parent="." instance=ExtResource("13_1vh8x")]
 
 [node name="living_room" type="Marker2D" parent="Enter_mark_point"]
@@ -415,6 +425,9 @@ position = Vector2(764, 340)
 
 [node name="world_2" type="Marker2D" parent="Enter_mark_point"]
 position = Vector2(754, 428)
+
+[node name="cellar" type="Marker2D" parent="Enter_mark_point"]
+position = Vector2(862, 462)
 
 [node name="InventoryRect" type="Sprite2D" parent="."]
 visible = false
@@ -427,3 +440,4 @@ texture = ExtResource("14_8dymh")
 [editable path="interact_area/Charecter_Dialog_Area2"]
 [editable path="Screen_tranfer_Trigger_Area"]
 [editable path="Screen_tranfer_Trigger_Area2"]
+[editable path="Screen_tranfer_Trigger_Area3"]

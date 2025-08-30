@@ -21,6 +21,11 @@ SignalBusser="*res://script/SignalBusser.gd"
 GlobalInv="*res://script/Global_inv.gd"
 SenceManager="*res://script/SenceManager.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [dotnet]
 
 project/assembly_name="DEV_dialog_system"
