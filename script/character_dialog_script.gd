@@ -74,7 +74,6 @@ func next_conver():
 func answer_text():
 	SignalBusser.disconnect("display_char_dialog", display_con)
 	for ind in range(sub_dialog.size()):
-		print(ind)
 		var butt = Button.new()
 		butt.text = sub_dialog[ind]['label']
 		butt.pressed.connect(on_choice_selected.bind(sub_dialog[ind]["connect"]))
@@ -87,7 +86,6 @@ func on_choice_selected(con):
 		if child is Button:
 			child.queue_free()
 	selected_event.append(con)
-	print(selected_event)
 	process_text()
 
 func finish():

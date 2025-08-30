@@ -43,7 +43,7 @@ func _physics_process(delta):
 		input_direction.y -= 1
 
 	if velocity.length() < 5:
-		#print(input_direction.y)
+
 		character.play("idle_" + last_direction)
 	else:
 		if abs(input_direction.x) > abs(input_direction.y):

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=4 uid="uid://ckfcmfs35wb5m"]
 
 [ext_resource type="Texture2D" uid="uid://bm2sourlg4xqm" path="res://Asset/Tiles/Mansion.png" id="1_7k881"]
-[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Sence/screen_tranfer_trigger_area.tscn" id="1_fmttx"]
-[ext_resource type="Script" uid="uid://4655gpc2l4md" path="res://Sence/cellar.gd" id="1_wqxe4"]
-[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Sence/enter_mark_point.tscn" id="2_7k881"]
+[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="1_fmttx"]
+[ext_resource type="Script" uid="uid://4655gpc2l4md" path="res://script/cellar.gd" id="1_wqxe4"]
+[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="2_7k881"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqxe4"]
 texture = ExtResource("1_7k881")
@@ -186,7 +186,7 @@ texture = ExtResource("1_7k881")
 sources/0 = SubResource("TileSetAtlasSource_wqxe4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqxe4"]
-size = Vector2(26.5, 32)
+size = Vector2(26.5, 14)
 
 [node name="cellar" type="Node2D"]
 script = ExtResource("1_wqxe4")
@@ -206,12 +206,12 @@ tile_set = SubResource("TileSet_jvjq4")
 connect_scene = "world_1"
 
 [node name="CollisionShape2D" parent="Screen_tranfer_Trigger_Area" index="0"]
-position = Vector2(551.75, 112)
+position = Vector2(551.75, 103)
 shape = SubResource("RectangleShape2D_wqxe4")
 
 [node name="Enter_mark_point" parent="." instance=ExtResource("2_7k881")]
 
 [node name="world_1" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(555, 143)
+position = Vector2(551, 141)
 
 [editable path="Screen_tranfer_Trigger_Area"]

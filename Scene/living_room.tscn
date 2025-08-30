@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b1f4x7l15i4aw" path="res://script/World_base_script/room.gd" id="1_v6ont"]
 [ext_resource type="Texture2D" uid="uid://bm2sourlg4xqm" path="res://Asset/Tiles/Mansion.png" id="2_iopmf"]
-[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Sence/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
-[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Sence/enter_mark_point.tscn" id="7_l7hj5"]
+[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
+[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="7_l7hj5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iopmf"]
 texture = ExtResource("2_iopmf")
