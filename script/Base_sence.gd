@@ -12,12 +12,16 @@ func _ready():
 			
 		player = SenceManager.player
 		add_child(player)
-	position_player()
+		position_player()
 	
 func position_player():
 	var last_sence = SenceManager.last_scene_name
 	if last_sence.is_empty():
 		last_sence = "any"
+	print(last_sence, " LLLLLKKNLKNL")
 	for entrance in enter_mark.get_children():
-		if entrance is Marker2D and entrance.name == "any" or entrance.name == last_sence:
+		print(entrance.name)
+		if entrance is Marker2D and entrance.name == last_sence:
+			print("Im in for")
 			player.global_position = entrance.global_position
+			print(player.position.x, player.position.y)

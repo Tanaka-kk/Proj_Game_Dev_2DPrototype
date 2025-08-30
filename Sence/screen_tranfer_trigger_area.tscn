@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://tc8dxpyxrwu6" path="res://script/screen_tranfer_trigger_area.gd" id="1_e3fit"]
 
 [node name="Screen_tranfer_Trigger_Area" type="Area2D"]
+process_mode = 3
+disable_mode = 2
 script = ExtResource("1_e3fit")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
