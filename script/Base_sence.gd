@@ -12,7 +12,7 @@ func _ready():
 			
 		player = SenceManager.player
 		add_child(player)
-	position_player()
+		position_player()
 	
 func position_player():
 	var last_sence = SenceManager.last_scene_name

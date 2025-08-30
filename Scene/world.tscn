@@ -2,16 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://ckh3a6471ung" path="res://Image/Character_Profile/rudolf_.jpg" id="1_67sb8"]
 [ext_resource type="Script" uid="uid://oiyqwgk84rec" path="res://script/World_base_script/world.gd" id="1_mit0b"]
-[ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Sence/charecter_dialog_area.tscn" id="1_x4dr0"]
-[ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Sence/character_dialog_layer.tscn" id="2_18dol"]
+[ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="1_x4dr0"]
+[ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="2_18dol"]
 [ext_resource type="Texture2D" uid="uid://ba10pey8nqah3" path="res://Image/Character_Profile/teio.jpg" id="2_rgoh5"]
 [ext_resource type="Texture2D" uid="uid://b4oupmatu1fgr" path="res://Image/Item_icon/ITEM_key_1.jpg" id="3_v7qwg"]
-[ext_resource type="PackedScene" uid="uid://cb1yjfldunk86" path="res://Sence/interact_dialog_area.tscn" id="3_xwd1a"]
-[ext_resource type="PackedScene" uid="uid://bji5vp6e7ujm3" path="res://Sence/interact_dialog_layer.tscn" id="4_khg7s"]
-[ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Sence/inventory_ui_layer.tscn" id="5_18dol"]
-[ext_resource type="PackedScene" uid="uid://c87ofyvhdxi7s" path="res://Sence/player.tscn" id="9_rgoh5"]
-[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Sence/screen_tranfer_trigger_area.tscn" id="11_e32y8"]
-[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Sence/enter_mark_point.tscn" id="12_7dea2"]
+[ext_resource type="PackedScene" uid="uid://cb1yjfldunk86" path="res://Scene/interact_dialog_area.tscn" id="3_xwd1a"]
+[ext_resource type="PackedScene" uid="uid://bji5vp6e7ujm3" path="res://Scene/interact_dialog_layer.tscn" id="4_khg7s"]
+[ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="5_18dol"]
+[ext_resource type="PackedScene" uid="uid://c87ofyvhdxi7s" path="res://Scene/player.tscn" id="9_rgoh5"]
+[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="11_e32y8"]
+[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="12_7dea2"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="13_e32y8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdydh"]
@@ -27,7 +27,7 @@ height = 218.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dea2"]
 size = Vector2(99, 106)
 
-[node name="world_1" type="Node2D"]
+[node name="world" type="Node2D"]
 script = ExtResource("1_mit0b")
 
 [node name="obj" type="Node2D" parent="."]
@@ -78,6 +78,8 @@ shape = SubResource("CapsuleShape2D_e32y8")
 [node name="Inventory_UI_Layer" parent="." instance=ExtResource("5_18dol")]
 
 [node name="player" parent="." instance=ExtResource("9_rgoh5")]
+position = Vector2(720, 350)
+scale = Vector2(0.5, 0.5)
 
 [node name="Screen_tranfer_Trigger_Area" parent="." instance=ExtResource("11_e32y8")]
 position = Vector2(753, 501)
@@ -89,8 +91,8 @@ shape = SubResource("RectangleShape2D_7dea2")
 
 [node name="Enter_mark_point" parent="." instance=ExtResource("12_7dea2")]
 
-[node name="Marker2D" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(832, 318)
+[node name="world_2" type="Marker2D" parent="Enter_mark_point"]
+position = Vector2(600, 474)
 
 [node name="InventoryRect" type="Sprite2D" parent="."]
 position = Vector2(750, 502)

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://csyycvbtvcuqx" path="res://script/World_base_script/world_2.gd" id="1_vxwit"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="2_2daeh"]
-[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Sence/screen_tranfer_trigger_area.tscn" id="3_sy63j"]
-[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Sence/enter_mark_point.tscn" id="4_w3sbn"]
-[ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Sence/inventory_ui_layer.tscn" id="5_2daeh"]
+[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="3_sy63j"]
+[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="4_w3sbn"]
+[ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="5_2daeh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trsgs"]
 size = Vector2(46, 59)
@@ -28,7 +28,7 @@ shape = SubResource("RectangleShape2D_trsgs")
 [node name="Enter_mark_point" parent="." instance=ExtResource("4_w3sbn")]
 
 [node name="world" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(566, 226)
+position = Vector2(388, 222)
 
 [node name="Inventory_UI_Layer" parent="." instance=ExtResource("5_2daeh")]
 
