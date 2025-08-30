@@ -2,7 +2,7 @@ extends Node2D
 
 var player: Player
 var last_scene_name: String
-var scene_dir_path = "res://Sence/"
+var scene_dir_path = "res://Scene/"
 
 func change_screen(from, to_scene_name: String) -> void:
 	last_scene_name = from.name
