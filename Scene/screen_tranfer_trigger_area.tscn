@@ -1,10 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgekle46gxk7j"]
+[gd_scene load_steps=3 format=3 uid="uid://cgekle46gxk7j"]
 
 [ext_resource type="Script" uid="uid://tc8dxpyxrwu6" path="res://script/screen_tranfer_trigger_area.gd" id="1_e3fit"]
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_cvlxe"]
 
 [node name="Screen_tranfer_Trigger_Area" type="Area2D"]
 script = ExtResource("1_e3fit")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
+[node name="wrap_scene" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(964, 544)
+texture = ExtResource("2_cvlxe")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

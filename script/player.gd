@@ -5,9 +5,9 @@ class_name Player
 
 @export var current_character := "kyoto"
 
-var max_speed := 100.0
+var max_speed := 80.0
 var acceleration := 400.0
-var friction := 600.0
+var friction := 750.0
 var last_direction := "f"  # for idle direction (f = front, b = back, r = right)
 
 var triggered := true

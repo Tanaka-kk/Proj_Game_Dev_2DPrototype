@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd3itvnv405qr"]
+
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="1_gjrx4"]
+
+[node name="Node" type="Node"]
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 544)
+scale = Vector2(1.06667, 1.12593)
+texture = ExtResource("1_gjrx4")

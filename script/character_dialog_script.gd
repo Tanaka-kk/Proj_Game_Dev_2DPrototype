@@ -2,10 +2,9 @@ extends Node
 
 @onready var frame = $"."
 @onready var label = $text_dialog_bag/Label
-@onready var bg = $text_dialog_bag/TextureRect
+@onready var bg = $dialogue_background
 @onready var pic_pro = $Profile_picture/char_profile
 @onready var vbox = $VBoxContainer
-
 
 signal choice_selected(choice_index)
 
@@ -41,6 +40,7 @@ func display_con(key_id_time_line):
 		frame.visible = true
 		get_tree().paused = true
 		in_progress = true
+		bg.visible = true
 		selected_event = timeline[key_id_time_line].duplicate()
 		process_text()
 
@@ -94,3 +94,4 @@ func finish():
 	get_tree().paused = false
 	in_progress = false
 	frame.visible = false
+	bg.visible = false
