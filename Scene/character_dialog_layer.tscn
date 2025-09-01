@@ -1,15 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://cl16hinyu50v2"]
+[gd_scene load_steps=15 format=3 uid="uid://cl16hinyu50v2"]
 
 [ext_resource type="Script" uid="uid://cchhv1woyihes" path="res://script/character_dialog_script.gd" id="1_73p86"]
 [ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_wyocy"]
 [ext_resource type="Texture2D" uid="uid://cv616st5j81hh" path="res://Asset/Tiles/white_backgroud.png" id="3_sm2yv"]
 [ext_resource type="Texture2D" uid="uid://0e0rdx6xrm4w" path="res://Asset/Character/Rigo/Rigo.png" id="4_ft204"]
+[ext_resource type="Theme" uid="uid://ockebcoevtig" path="res://theme/dialog_theme.tres" id="4_jvgqs"]
 [ext_resource type="Texture2D" uid="uid://drytu5qamedg6" path="res://Asset/Character/Silvy/Silvy.png" id="5_jvgqs"]
 [ext_resource type="Texture2D" uid="uid://bcqv7w74dm88o" path="res://Asset/Character/Dell/Dell.png" id="6_na7qg"]
 [ext_resource type="Texture2D" uid="uid://eg5pkmgpkxk5" path="res://Asset/Character/Julian/Julian.png" id="7_iflwg"]
 [ext_resource type="Texture2D" uid="uid://btutv0lvia5om" path="res://Asset/Character/Kyo/Kyo.png" id="8_emcmp"]
 [ext_resource type="Texture2D" uid="uid://wc518einle36" path="res://Asset/Character/Rainbell/Rainbell.png" id="9_we0j7"]
 [ext_resource type="Texture2D" uid="uid://cvgr3r0ioxnff" path="res://Asset/Character/Real/real.png" id="10_gjg53"]
+[ext_resource type="Texture2D" uid="uid://r8ktgt5p4pml" path="res://Asset/Character/M.JPG" id="11_ft204"]
+
+[sub_resource type="Theme" id="Theme_na7qg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ialet"]
 animations = [{
@@ -73,6 +77,14 @@ animations = [{
 "loop": true,
 "name": &"ryou",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ft204")
+}],
+"loop": true,
+"name": &"xxx",
+"speed": 5.0
 }]
 
 [node name="Character_Dialog_Layer" type="CanvasLayer"]
@@ -80,7 +92,6 @@ process_mode = 3
 script = ExtResource("1_73p86")
 
 [node name="dialogue_background" type="Node2D" parent="."]
-visible = false
 
 [node name="BlackBackground" type="Sprite2D" parent="dialogue_background"]
 position = Vector2(960, 929)
@@ -104,16 +115,31 @@ position = Vector2(224, 896)
 scale = Vector2(0.5, 0.45)
 texture = ExtResource("3_sm2yv")
 
-[node name="text_dialog_bag" type="Container" parent="."]
+[node name="text_dialog_bag" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 offset_left = 472.0
-offset_top = 744.0
+offset_top = 840.0
 offset_right = 1856.0
 offset_bottom = 1040.0
 
+[node name="Panel" type="Panel" parent="text_dialog_bag"]
+custom_minimum_size = Vector2(1384, 200)
+layout_mode = 2
+offset_right = 1384.0
+offset_bottom = 200.0
+theme = ExtResource("4_jvgqs")
+
 [node name="Label" type="Label" parent="text_dialog_bag"]
 layout_mode = 2
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 1352.0
+offset_bottom = 184.0
+theme = SubResource("Theme_na7qg")
 
-[node name="Profile_picture" type="Container" parent="."]
+[node name="Profile_picture" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_top = 482.0
@@ -125,11 +151,25 @@ layout_mode = 2
 
 [node name="char_profile" type="AnimatedSprite2D" parent="Profile_picture"]
 process_mode = 3
-visible = false
 position = Vector2(224, 414)
 scale = Vector2(0.15975, 0.144)
 sprite_frames = SubResource("SpriteFrames_ialet")
-animation = &"chilfie"
+animation = &"xxx"
+
+[node name="Panel" type="Panel" parent="Profile_picture"]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 270.0
+offset_right = 736.0
+offset_bottom = 342.0
+theme = ExtResource("4_jvgqs")
+
+[node name="Label" type="Label" parent="Profile_picture"]
+layout_mode = 2
+offset_left = 488.0
+offset_top = 286.0
+offset_right = 720.0
+offset_bottom = 326.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
