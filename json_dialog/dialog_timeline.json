@@ -1,6 +1,13 @@
 {
 	"content":{
 		"start_joke":["RU_01_01","AN_RU_01"],
-		"give_key_1":["RU_02_01","ITEM_gun"]
+		"give_key_1":["RU_02_01","ITEM_key_1"],
+		"Intro":["RU_IT_CN_00_001_KC","RU_IT_NA_00_001","RU_IT_CN_00_002_KC",
+				"RU_IT_NA_00_002","RU_IT_CN_00_003","RU_IT_NA_00_003",
+				"RU_IT_CN_00_004","RU_IT_NA_00_004","RU_IT_CN_00_005",
+				"RU_IT_NA_00_005","RU_IT_CN_00_006","RU_IT_NA_00_006",
+				"RU_IT_CN_00_007_KC","RU_IT_NA_00_007","RU_IT_CN_00_008_KC",
+				"RU_IT_NA_00_008","RU_IT_CN_00_009","RU_IT_NA_00_009",
+				"RU_IT_CN_00_010"]
 	}
 }
