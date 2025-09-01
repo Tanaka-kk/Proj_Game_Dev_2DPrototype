@@ -19,5 +19,5 @@ func position_player():
 	if last_sence.is_empty():
 		last_sence = "any"
 	for entrance in enter_mark.get_children():
-		if entrance is Marker2D and entrance.name == "any" or entrance.name == last_sence:
+		if entrance is Marker2D and entrance.name == last_sence:
 			player.global_position = entrance.global_position

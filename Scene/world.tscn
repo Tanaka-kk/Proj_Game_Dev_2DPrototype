@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bg4hk8eir30fo"]
+[gd_scene load_steps=18 format=3 uid="uid://bmox52fgyne7s"]
 
 [ext_resource type="Texture2D" uid="uid://ckh3a6471ung" path="res://Image/Character_Profile/rudolf_.jpg" id="1_67sb8"]
 [ext_resource type="Script" uid="uid://oiyqwgk84rec" path="res://script/World_base_script/world.gd" id="1_mit0b"]

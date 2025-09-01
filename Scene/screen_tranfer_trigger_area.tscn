@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_cvlxe"]
 
 [node name="Screen_tranfer_Trigger_Area" type="Area2D"]
+process_mode = 3
+disable_mode = 2
 script = ExtResource("1_e3fit")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
