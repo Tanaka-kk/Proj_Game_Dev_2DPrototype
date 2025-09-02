@@ -39,8 +39,10 @@ func image_change():
 		prog = true
 
 func change_se():
+	get_tree().paused = true
 	for i in 11:
 		$BlackBackground.modulate.a = 0.1*i
 		await get_tree().create_timer(0.15).timeout
 	SignalBusser.disconnect("finish_dia",change_se)
+	get_tree().paused = false
 	get_tree().change_scene_to_packed(world)

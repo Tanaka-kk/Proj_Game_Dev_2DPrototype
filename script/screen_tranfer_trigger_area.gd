@@ -5,6 +5,7 @@ class_name Screen_trigger
 @export var connect_scene: String #name sence
 var sence_floder = "res://Scene/"
 var in_area = false
+var in_progress = false
 
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player:
@@ -15,7 +16,8 @@ func _on_body_entered(body: Node2D) -> void:
 		in_area = true
 
 func _input(event: InputEvent) -> void:
-	if in_area and event.is_action_pressed("interact"):
+	if in_area and event.is_action_pressed("interact") and !in_progress:
+		in_progress = true
 		$wrap_scene.visible = true
 		for i in 11:
 			$wrap_scene.modulate.a = 0.1*i
@@ -23,4 +25,5 @@ func _input(event: InputEvent) -> void:
 		await get_tree().create_timer(2).timeout
 		$wrap_scene.visible = false
 		SenceManager.change_screen(get_owner(), connect_scene)
+		in_progress = false
 	
