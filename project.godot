@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DEV_dialog_system"
-run/main_scene="uid://bg4hk8eir30fo"
+run/main_scene="uid://07b5rvevxken"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
@@ -20,6 +20,7 @@ DialogLoader="*res://script/data_loader.gd"
 SignalBusser="*res://script/SignalBusser.gd"
 GlobalInv="*res://script/Global_inv.gd"
 SenceManager="*res://script/SenceManager.gd"
+SettingInterfaceLayer="*res://script/setting_interface_layer.gd"
 
 [display]
 

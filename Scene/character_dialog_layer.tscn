@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cl16hinyu50v2"]
+[gd_scene load_steps=16 format=3 uid="uid://cl16hinyu50v2"]
 
 [ext_resource type="Script" uid="uid://cchhv1woyihes" path="res://script/character_dialog_script.gd" id="1_73p86"]
 [ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_wyocy"]
@@ -23,6 +23,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"Riko",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"banarak",
 "speed": 5.0
 }, {
 "frames": [{
@@ -87,6 +92,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jvgqs"]
+
 [node name="Character_Dialog_Layer" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_73p86")
@@ -137,6 +144,7 @@ offset_top = 20.0
 offset_right = 1352.0
 offset_bottom = 184.0
 theme = SubResource("Theme_na7qg")
+theme_override_font_sizes/font_size = 32
 
 [node name="Profile_picture" type="Control" parent="."]
 layout_mode = 3
@@ -154,7 +162,7 @@ process_mode = 3
 position = Vector2(224, 414)
 scale = Vector2(0.15975, 0.144)
 sprite_frames = SubResource("SpriteFrames_ialet")
-animation = &"xxx"
+animation = &"banarak"
 
 [node name="Panel" type="Panel" parent="Profile_picture"]
 layout_mode = 2
@@ -170,6 +178,36 @@ offset_left = 488.0
 offset_top = 286.0
 offset_right = 720.0
 offset_bottom = 326.0
+
+[node name="narater_dialog" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 228.0
+offset_top = 282.0
+offset_right = 1612.0
+offset_bottom = 482.0
+
+[node name="Panel" type="Panel" parent="narater_dialog"]
+custom_minimum_size = Vector2(1384, 200)
+offset_right = 1384.0
+offset_bottom = 200.0
+theme = ExtResource("4_jvgqs")
+
+[node name="ColorRect" type="ColorRect" parent="narater_dialog/Panel"]
+material = SubResource("ShaderMaterial_jvgqs")
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 45.0
+
+[node name="Label" type="Label" parent="narater_dialog"]
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 1352.0
+offset_bottom = 184.0
+theme = SubResource("Theme_na7qg")
+theme_override_font_sizes/font_size = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
