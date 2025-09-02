@@ -115,6 +115,7 @@ func finish():
 	in_progress = false
 	frame.visible = false
 	bg.visible = false
+	SignalBusser.emit_signal("finish_dia")
 
 func matcher(thai_name: String):
 	match thai_name:
