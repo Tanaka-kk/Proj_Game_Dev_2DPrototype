@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://fcf1hhwwo0cl"]
+[gd_scene load_steps=9 format=4 uid="uid://fcf1hhwwo0cl"]
 
 [ext_resource type="Script" uid="uid://csyycvbtvcuqx" path="res://script/World_base_script/world_2.gd" id="1_vxwit"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="2_2daeh"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="4_w3sbn"]
 [ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="5_2daeh"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="9_ctgo3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aujit"]
+size = Vector2(36, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trsgs"]
 size = Vector2(12.5, 35.5)
@@ -34,6 +37,13 @@ position = Vector2(191, 504)
 scale = Vector2(2.55263, 3.18421)
 texture = ExtResource("2_2daeh")
 
+[node name="Screen_tranfer_Trigger_Area2" parent="." instance=ExtResource("3_sy63j")]
+connect_scene = "owner_room"
+
+[node name="CollisionShape2D" parent="Screen_tranfer_Trigger_Area2" index="0"]
+position = Vector2(932, 548.5)
+shape = SubResource("RectangleShape2D_aujit")
+
 [node name="Screen_tranfer_Trigger_Area" parent="." instance=ExtResource("3_sy63j")]
 position = Vector2(821, 516)
 connect_scene = "world_1"
@@ -48,7 +58,11 @@ shape = SubResource("RectangleShape2D_trsgs")
 [node name="world_1" type="Marker2D" parent="Enter_mark_point"]
 position = Vector2(808, 452)
 
+[node name="owner_room" type="Marker2D" parent="Enter_mark_point"]
+position = Vector2(932, 548)
+
 [node name="Inventory_UI_Layer" parent="." instance=ExtResource("5_2daeh")]
 
 [editable path="Forniture2"]
+[editable path="Screen_tranfer_Trigger_Area2"]
 [editable path="Screen_tranfer_Trigger_Area"]

@@ -186,9 +186,10 @@ texture = ExtResource("1_7k881")
 sources/0 = SubResource("TileSetAtlasSource_wqxe4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqxe4"]
-size = Vector2(26.5, 14)
+size = Vector2(26.5, 31)
 
 [node name="cellar" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_wqxe4")
 
 [node name="Floor" type="TileMapLayer" parent="."]
@@ -206,7 +207,7 @@ tile_set = SubResource("TileSet_jvjq4")
 connect_scene = "world_1"
 
 [node name="CollisionShape2D" parent="Screen_tranfer_Trigger_Area" index="0"]
-position = Vector2(551.75, 103)
+position = Vector2(551.75, 111.5)
 shape = SubResource("RectangleShape2D_wqxe4")
 
 [node name="Enter_mark_point" parent="." instance=ExtResource("2_7k881")]
