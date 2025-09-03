@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cl16hinyu50v2"]
+[gd_scene load_steps=18 format=3 uid="uid://cl16hinyu50v2"]
 
 [ext_resource type="Script" uid="uid://cchhv1woyihes" path="res://script/character_dialog_script.gd" id="1_73p86"]
 [ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_wyocy"]
@@ -103,8 +103,6 @@ animations = [{
 line_spacing = 4.0
 font_size = 48
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jvgqs"]
-
 [node name="Character_Dialog_Layer" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_73p86")
@@ -157,6 +155,7 @@ offset_bottom = 184.0
 theme = SubResource("Theme_na7qg")
 theme_override_font_sizes/font_size = 32
 label_settings = SubResource("LabelSettings_na7qg")
+autowrap_mode = 3
 
 [node name="continu" type="Control" parent="text_dialog_bag"]
 anchors_preset = 0
@@ -233,14 +232,6 @@ offset_right = 1384.0
 offset_bottom = 200.0
 theme = ExtResource("4_jvgqs")
 
-[node name="ColorRect" type="ColorRect" parent="narater_dialog/Panel"]
-material = SubResource("ShaderMaterial_jvgqs")
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 45.0
-offset_bottom = 45.0
-
 [node name="Label" type="Label" parent="narater_dialog"]
 layout_mode = 0
 offset_left = 40.0
@@ -249,6 +240,9 @@ offset_right = 1352.0
 offset_bottom = 184.0
 theme = SubResource("Theme_na7qg")
 theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8

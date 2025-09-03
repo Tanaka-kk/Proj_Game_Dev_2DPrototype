@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://bg4hk8eir30fo"]
+[gd_scene load_steps=24 format=4 uid="uid://bg4hk8eir30fo"]
 
 [ext_resource type="Script" uid="uid://oiyqwgk84rec" path="res://script/World_base_script/world.gd" id="1_lccqd"]
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_ibxvk"]
 [ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_kfupk"]
 [ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="8_4omoa"]
 [ext_resource type="PackedScene" uid="uid://bji5vp6e7ujm3" path="res://Scene/interact_dialog_layer.tscn" id="9_ldnv2"]
@@ -11,7 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="12_g481w"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="13_1vh8x"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="14_8dymh"]
+[ext_resource type="PackedScene" uid="uid://cgxhmcf6ee8sb" path="res://Scene/chilfie.tscn" id="14_e45r7"]
+[ext_resource type="PackedScene" uid="uid://cfytp7hyqfkn4" path="res://Scene/kyoto.tscn" id="15_3d0io"]
+[ext_resource type="PackedScene" uid="uid://dovtksugk4xoo" path="res://Scene/julius.tscn" id="16_3nrrq"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="17_6kb72"]
+[ext_resource type="PackedScene" uid="uid://dhjv7l0tjy251" path="res://Scene/ryou.tscn" id="17_tlu0p"]
+[ext_resource type="PackedScene" uid="uid://c4nef5x01tmdy" path="res://Scene/renbel.tscn" id="18_7dvdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dea2"]
 size = Vector2(11.0313, 50.875)
@@ -31,6 +37,12 @@ size = Vector2(20, 38)
 [node name="world_1" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_lccqd")
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(632, 411)
+texture = ExtResource("2_ibxvk")
 
 [node name="Forniture2" parent="." instance=ExtResource("17_6kb72")]
 
@@ -133,6 +145,31 @@ dialog_key = "Ch1_02"
 [node name="CollisionShape2D" parent="story_layer/ch1_02/Instant_area" index="0"]
 position = Vector2(470, 430)
 shape = SubResource("RectangleShape2D_i1oxt")
+
+[node name="chilfie" parent="." instance=ExtResource("14_e45r7")]
+visible = false
+position = Vector2(633, 400)
+scale = Vector2(0.5, 0.5)
+
+[node name="kyo" parent="." instance=ExtResource("15_3d0io")]
+visible = false
+position = Vector2(658, 429)
+scale = Vector2(0.5, 0.5)
+
+[node name="julius" parent="." instance=ExtResource("16_3nrrq")]
+visible = false
+position = Vector2(612, 425)
+scale = Vector2(0.5, 0.5)
+
+[node name="ryou" parent="." instance=ExtResource("17_tlu0p")]
+visible = false
+position = Vector2(667, 460)
+scale = Vector2(0.5, 0.5)
+
+[node name="renbel" parent="." instance=ExtResource("18_7dvdb")]
+visible = false
+position = Vector2(689, 378)
+scale = Vector2(0.5, 0.5)
 
 [editable path="Forniture2"]
 [editable path="player"]

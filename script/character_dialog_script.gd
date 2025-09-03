@@ -52,7 +52,7 @@ func display_con(key_id_time_line):
 			finish()
 	else:
 		frame.visible = true
-		get_tree().paused = true
+		#get_tree().paused = true
 		in_progress = true
 		bg.visible = true
 		selected_event = timeline[key_id_time_line].duplicate()
