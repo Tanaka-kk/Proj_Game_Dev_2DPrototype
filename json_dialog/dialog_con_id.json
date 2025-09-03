@@ -1,39 +1,4 @@
 {
-<<<<<<< Updated upstream
-    "content":{
-        "RU_01_01":{
-            "char_in":["rudolf","teio","mcqueen"],
-            "dialog":[
-                {"char":"rudolf", "line":"As president, I promise a very STABLE administration."},
-                {"char":"teio", "line":"Stable like steady... or STABLE like the barn?"},
-                {"char":"rudolf", "line":"Both. We're horses."},
-                {"char":"mcqueen", "line":"...Classic Symboli dad joke."}
-            ]
-        },
-        "RU_01_02":{
-            "char_in":["rudolf","teio","mcqueen"],
-            "dialog":[
-                {"char":"teio", "line":"New meeting, new goals—who's leading?"},
-                {"char":"rudolf", "line":"As president, I'll trot us through the agenda."},
-                {"char":"mcqueen", "line":"Agenda item one: mandatory snack break."},
-                {"char":"teio", "line":"Seconded. Carrots for morale."}
-            ]
-        },
-        "RU_02_01":{
-            "char_in":["rudolf"],
-            "dialog":[
-                {"char":"rudolf", "line":"Any way Here the key"},
-                {"char":"rudolf", "line":"keep it to you and it will help you later"}
-            ]
-        },
-        "fin":{
-            "char_in":[],
-            "dialog":[]
-        }
-        
-    }
-}
-=======
 	"content":{
 		"RU_IT_CN_00_001_KC":{
 			"char_in":["เทพชะตา"],
@@ -344,7 +309,7 @@
 			"char_in":[""],
 			"dialog":[
 				{"char":"", "line":"หลังจากนั้นทุกคนก็แยกย้ายกันไป"},
-				{"char":"", "line":"ณ ชั้น 2 ในห้องที่ชิลฟี่แบะจูเลียสขึ้นมาค้นหาข้อมูล"}
+				{"char":"", "line":"ณ ชั้น 2 ที่ชิลฟี่และจูเลียสขึ้นมาเพื่อหาข้อมูล"}
 			]
 		},
 
@@ -365,7 +330,7 @@
 		}, 
 
 		"RU_CH_CN_01_009":{
-			"char_in":["ชิลฟี่"],
+			"char_in":["ชิลฟี่","เรียว","เคียว","ชิลฟี่"],
 			"dialog":[
 				{"char":"ชิลฟี่", "line":"นี่มันสมุดบันทึกของ..."},
 				{"char":"ชิลฟี่", "line":"'ลูซิเอล เรย์!?'"},
@@ -1076,12 +1041,6 @@
 				{"char":"เคียว","line":"อดีตของคฤหาสน์หลังนี้นะ..."}
 			]
 		},
-		"RU_CH_CN_OR_SC1":{
-			"char_in":["ชิลฟี่"],
-			"dialog":[
-				{"char":"ชิลฟี่","line":"หนังสือพวกนี้ดูเก่ามากเลย..."}
-			]
-		},
 
 
 
@@ -1098,4 +1057,3 @@
 		
 	}
 }
->>>>>>> Stashed changes

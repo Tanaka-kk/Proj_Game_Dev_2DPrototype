@@ -11,7 +11,6 @@ func _ready() -> void:
 	background.visible = false
 	sence_text = load_text()
 	SignalBusser.connect("display_dialog", on_display)
-	print(sence_text.keys())
 	
 func load_text():
 	var dict_j = DialogLoader.json_data['interact_obj_item']['content']
