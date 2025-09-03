@@ -15,7 +15,7 @@ func _ready() -> void:
 	$"../kyoto".visible = true
 	$"../renbel".visible = true
 	$"../ryou".visible = true
-	$"../player".last_direction = "b"
+	#$"../player".last_direction = "b"
 	$"../BlackBackground".modulate.a = 0.0
 	#await get_tree().create_timer(4).timeout
 	#activate_sig()
@@ -41,7 +41,7 @@ func _input(event: InputEvent) -> void:
 				$"../BlackBackground".modulate.a += 0.1
 				await get_tree().create_timer(0.1).timeout
 			await get_tree().create_timer(1.5).timeout
-			$"../player".last_direction = "b"
+			#$"../player".last_direction = "b"
 			$"../player".current_character = "chilfie"
 			GlobalVal.current_state = "Floor2_Ch1"
 			SenceManager.change_screen(get_owner(), "world_2")
