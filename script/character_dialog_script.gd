@@ -46,6 +46,9 @@ func display_con(key_id_time_line):
 		bg.visible = true
 		print(key_id_time_line)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
