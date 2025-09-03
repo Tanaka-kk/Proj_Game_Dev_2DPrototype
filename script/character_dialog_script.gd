@@ -22,8 +22,12 @@ var sub_sub_dialog_pro = false
 var select_sd
 var key_id = ""
 var mode = ""
+<<<<<<< HEAD
 var tag = false
 var on_play = false
+=======
+var wait_transform = false
+>>>>>>> a3cc80615cb894642cc08bb7fbf70818983e6a5f
 
 func _ready() -> void:
 	timeline = DialogLoader.json_data['dialog_timeline']['content']
@@ -33,11 +37,19 @@ func _ready() -> void:
 	SignalBusser.connect("display_char_dialog",display_con)
 
 func _input(event: InputEvent) -> void:
+<<<<<<< HEAD
 	if event.is_action_pressed("Skip"):
 		if key_id != "":
 			display_con(key_id)
 			if on_play:
 				tag = true
+=======
+	if event.is_action_pressed("interact") and !wait_transform:
+		if key_id != "":
+			display_con(key_id)
+	if event.is_action_pressed("skip"):
+		finish()
+>>>>>>> a3cc80615cb894642cc08bb7fbf70818983e6a5f
 
 func display_con(key_id_time_line):
 	key_id = key_id_time_line
@@ -139,6 +151,7 @@ func finish():
 	frame.visible = false
 	bg.visible = false
 	SignalBusser.emit_signal("finish_dia")
+	wait_transform = true
 
 func matcher(thai_name: String):
 	match thai_name:

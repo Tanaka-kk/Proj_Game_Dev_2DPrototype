@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bg4hk8eir30fo"]
+[gd_scene load_steps=22 format=4 uid="uid://bg4hk8eir30fo"]
 
 [ext_resource type="Script" uid="uid://oiyqwgk84rec" path="res://script/World_base_script/world.gd" id="1_lccqd"]
 [ext_resource type="Texture2D" uid="uid://ckh3a6471ung" path="res://Image/Character_Profile/rudolf_.jpg" id="3_aeth5"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="12_g481w"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="13_1vh8x"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="14_8dymh"]
+[ext_resource type="Script" uid="uid://c4plqrpfuvspw" path="res://script/dummy_node_script.gd" id="15_f5lln"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="17_6kb72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdydh"]
@@ -102,8 +103,10 @@ shape = SubResource("CapsuleShape2D_e32y8")
 visible = false
 
 [node name="Interact_Dialog_Layer" parent="." instance=ExtResource("9_ldnv2")]
+visible = false
 
 [node name="Inventory_UI_Layer" parent="." instance=ExtResource("10_i805u")]
+visible = false
 
 [node name="player" parent="." instance=ExtResource("11_4t3x1")]
 visibility_layer = 2
@@ -135,7 +138,7 @@ shape = SubResource("RectangleShape2D_yyhej")
 [node name="Enter_mark_point" parent="." instance=ExtResource("13_1vh8x")]
 
 [node name="living_room" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(764, 340)
+position = Vector2(755, 347)
 
 [node name="world_2" type="Marker2D" parent="Enter_mark_point"]
 position = Vector2(774, 428)
@@ -148,6 +151,9 @@ visible = false
 position = Vector2(753, 502)
 scale = Vector2(5.39474, 5.92105)
 texture = ExtResource("14_8dymh")
+
+[node name="dummy_node" type="Node2D" parent="."]
+script = ExtResource("15_f5lln")
 
 [editable path="Forniture2"]
 [editable path="interact_area/Charecter_Dialog_Area"]
