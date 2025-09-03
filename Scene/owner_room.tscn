@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="1_c5njw"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="1_m25rx"]
-[ext_resource type="Script" uid="uid://42hyxa0j42dn" path="res://script/owner_room.gd" id="1_riwjv"]
+[ext_resource type="Script" path="res://script/owner_room.gd" id="1_riwjv"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="2_c5njw"]
 [ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="5_0gcao"]
 [ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_iexjt"]
@@ -77,7 +77,7 @@ shape = SubResource("RectangleShape2D_riwjv")
 [node name="Enter_mark_point" parent="." instance=ExtResource("2_c5njw")]
 
 [node name="world_2" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(750, 362)
+position = Vector2(713, 406)
 
 [node name="Character_Dialog_Layer" parent="." instance=ExtResource("5_0gcao")]
 visible = false

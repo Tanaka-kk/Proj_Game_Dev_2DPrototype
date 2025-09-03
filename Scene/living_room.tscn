@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1f4x7l15i4aw" path="res://script/World_base_script/room.gd" id="1_v6ont"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="2_1nji3"]
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_pbccy"]
 [ext_resource type="Script" uid="uid://ecsp4gs3mboy" path="res://Scene/story_living.gd" id="5_0c3fy"]
 [ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_ele34"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
@@ -11,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://cfytp7hyqfkn4" path="res://Scene/kyoto.tscn" id="9_pbccy"]
 [ext_resource type="PackedScene" uid="uid://c4nef5x01tmdy" path="res://Scene/renbel.tscn" id="10_jvgng"]
 [ext_resource type="PackedScene" uid="uid://dhjv7l0tjy251" path="res://Scene/ryou.tscn" id="11_2wob0"]
-[ext_resource type="PackedScene" uid="uid://c87ofyvhdxi7s" path="res://Scene/player.tscn" id="12_jcx0t"]
 [ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="13_kiqjd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xfd2"]
@@ -114,11 +114,12 @@ visible = false
 position = Vector2(74, 155)
 scale = Vector2(0.5, 0.5)
 
-[node name="player" parent="." instance=ExtResource("12_jcx0t")]
-position = Vector2(86, 205)
-scale = Vector2(0.5, 0.5)
-
 [node name="Character_Dialog_Layer" parent="." instance=ExtResource("13_kiqjd")]
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(193, 101)
+texture = ExtResource("2_pbccy")
 
 [editable path="Forniture"]
 [editable path="Screen_tranfer_Trigger_Area"]

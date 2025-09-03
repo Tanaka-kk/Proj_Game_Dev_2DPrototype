@@ -4,6 +4,7 @@ class_name Player
 @onready var character := $Kyoto
 
 @export var current_character := "chilfie"
+var dialo: String = ""
 
 var max_speed := 80.0
 var acceleration := 400.0
@@ -11,6 +12,7 @@ var friction := 750.0
 var last_direction := "r"  # for idle direction (f = front, b = back, r = right)
 var is_playing_footstep = false
 var triggered := true
+
 
 func _physics_process(delta):
 	var input_direction := Vector2.ZERO
@@ -69,13 +71,13 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
-	if velocity != Vector2.ZERO:
-		if not is_playing_footstep:
-			AudioManager.play("Footstep")
-			is_playing_footstep = true
-	else:
-		if is_playing_footstep:
-			AudioManager.stop()
-			is_playing_footstep = false
+	#if velocity != Vector2.ZERO:
+		#if not is_playing_footstep:
+			#AudioManager.play("Footstep")
+			#is_playing_footstep = true
+	#else:
+		#if is_playing_footstep:
+			#AudioManager.stop()
+			#is_playing_footstep = false
 
 	move_and_slide()

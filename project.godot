@@ -22,6 +22,7 @@ GlobalInv="*res://script/Global_inv.gd"
 SenceManager="*res://script/SenceManager.gd"
 SettingInterfaceLayer="*res://script/setting_interface_layer.gd"
 AudioManager="*res://Scene/audio_manager.tscn"
+GlobalVal="*res://script/Global_Val.gd"
 
 [display]
 
