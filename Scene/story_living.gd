@@ -5,7 +5,6 @@ var trigger = 0
 var trig = true
 
 func _ready() -> void:
-	GlobalVal.current_state = ""
 	$"../delmon/AnimatedSprite2D".play("idle_b")
 	$"../julius/AnimatedSprite2D".play("idle_b")
 	$"../kyoto/AnimatedSprite2D".play("idle_f")
@@ -43,7 +42,7 @@ func _input(event: InputEvent) -> void:
 				await get_tree().create_timer(0.1).timeout
 			await get_tree().create_timer(1.5).timeout
 			#$"../player".last_direction = "b"
-			#$"../player".current_character = "chilfie"
+			$"../player".current_character = "chilfie"
 			GlobalVal.current_state = "Floor2_Ch1"
 			SenceManager.change_screen(get_owner(), "world_2")
 			trigger += 1

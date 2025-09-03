@@ -21,7 +21,6 @@ func dialoc() -> void:
 	if $Charecter_Dialog_Area.area_active and GlobalVal.current_state == "Floor2_Ch1":
 		SignalBusser.emit_signal("display_char_dialog",GlobalVal.current_state)
 		GlobalVal.current_state = ""
-		$Charecter_Dialog_Area.area_active = false
 		$Charecter_Dialog_Area/Instant_area/CollisionShape2D.disabled = true
 		$"../BlackBackground".visible = true
 		$"../BlackBackground".modulate.a = 1.0

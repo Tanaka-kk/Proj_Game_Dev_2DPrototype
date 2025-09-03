@@ -20,3 +20,6 @@ res://Scene/chilfie.tscn
 res://Scene/audio_manager.tscn
 res://Scene/enter_mark_point.tscn
 res://script/dialog_charecter_area.gd
+res://Scene/story_living.gd
+res://Scene/story_world_2.gd
+res://script/character_dialog_script.gd
