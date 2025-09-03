@@ -45,6 +45,9 @@ func display_con(key_id_time_line):
 =======
 		bg.visible = true
 		print(key_id_time_line)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		selected_event = timeline[key_id_time_line].duplicate()
 		process_text()
