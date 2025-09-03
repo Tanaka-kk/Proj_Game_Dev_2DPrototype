@@ -125,15 +125,14 @@ dialog_key = "Ch1_01"
 [node name="CollisionShape2D" parent="story_layer/ch1_01/Instant_area" index="0"]
 position = Vector2(524.5, 360)
 shape = SubResource("RectangleShape2D_1x4wd")
+disabled = false
 
 [node name="ch1_02" parent="story_layer" instance=ExtResource("6_kfupk")]
-visible = false
 dialog_key = "Ch1_02"
 
 [node name="CollisionShape2D" parent="story_layer/ch1_02/Instant_area" index="0"]
-position = Vector2(469, 430)
+position = Vector2(470, 430)
 shape = SubResource("RectangleShape2D_i1oxt")
-disabled = true
 
 [editable path="Forniture2"]
 [editable path="player"]
