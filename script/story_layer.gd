@@ -11,6 +11,8 @@ var trig = true
 func _ready() -> void:
 	area_trigger_story = get_children()
 	activate_event()
+	trigger = 0
+	trig = true
 
 func _process(delta: float) -> void:
 	if area_trigger_story.size() > event_index:
@@ -39,6 +41,7 @@ func _input(event: InputEvent) -> void:
 			
 		elif trigger == 0:
 			$"../delmon/AnimatedSprite2D".play("idle_f")
+			trigger += 1
 		
 		else:
 			trigger += 1
@@ -60,10 +63,54 @@ func _input(event: InputEvent) -> void:
 			$"../chilfie".visible = true
 			$"../chilfie/AnimatedSprite2D".play("idle_r")
 			$"../chilfie/AnimatedSprite2D".flip_h = true
+			trigger += 1
+			
+		elif trigger == 4:
+			$"../BlackBackground".visible = true
+			trigger += 1
 			
 		elif trigger == 5:
 			$"../julius".visible = true
+			$"../julius".position = Vector2(520,465)
+			$"../julius/AnimatedSprite2D".play("idle_b")
+			for i in 10:
+				$"../BlackBackground".modulate.a -= 0.1
+				await get_tree().create_timer(0.08).timeout
+			$"../BlackBackground".visible = false
+			trigger += 1
+		
+		elif trigger == 6:
+			$"../delmon/AnimatedSprite2D".play("walk_f")
+			for i in 50:
+				$"../delmon".position.y += 1.0
+				await get_tree().create_timer(0.04).timeout
+				
+			$"../delmon/AnimatedSprite2D".play("idle_f")
+			trigger += 1
+		
+		elif trigger == 8:
+			$"../BlackBackground".modulate.a = 1.0
+			$"../BlackBackground".visible = true
+			trigger += 1
 			
+		elif trigger == 9:
+			$"../renbel".visible = true
+			$"../renbel".position = Vector2(550,400)
+			$"../renbel/AnimatedSprite2D".play("idle_f")
+			for i in 10:
+				$"../BlackBackground".modulate.a -= 0.1
+				await get_tree().create_timer(0.08).timeout
+			trigger += 1
+			
+		elif trigger == 12:
+			for i in 10:
+				$"../BlackBackground".modulate.a += 0.1
+				await get_tree().create_timer(0.1).timeout
+			trigger += 1
+		
+		elif trigger == 13:
+			SenceManager.change_screen(get_owner(), "living_room")
+			trigger += 1
 			
 		else:
 			trigger += 1

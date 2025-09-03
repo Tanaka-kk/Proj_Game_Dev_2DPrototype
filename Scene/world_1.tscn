@@ -121,13 +121,6 @@ position = Vector2(753, 502)
 scale = Vector2(5.39474, 5.92105)
 texture = ExtResource("14_8dymh")
 
-[node name="delmon" parent="." instance=ExtResource("10_42d6j")]
-position = Vector2(516, 362)
-scale = Vector2(0.5, 0.5)
-
-[node name="AnimatedSprite2D" parent="delmon" index="0"]
-animation = &"idle_b"
-
 [node name="story_layer" type="Node2D" parent="."]
 script = ExtResource("11_i1oxt")
 
@@ -145,6 +138,13 @@ dialog_key = "Ch1_02"
 [node name="CollisionShape2D" parent="story_layer/ch1_02/Instant_area" index="0"]
 position = Vector2(470, 430)
 shape = SubResource("RectangleShape2D_i1oxt")
+
+[node name="delmon" parent="." instance=ExtResource("10_42d6j")]
+position = Vector2(516, 362)
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimatedSprite2D" parent="delmon" index="0"]
+animation = &"idle_b"
 
 [node name="chilfie" parent="." instance=ExtResource("14_e45r7")]
 visible = false
@@ -176,7 +176,7 @@ scale = Vector2(0.5, 0.5)
 [editable path="Screen_tranfer_Trigger_Area"]
 [editable path="Screen_tranfer_Trigger_Area2"]
 [editable path="Screen_tranfer_Trigger_Area3"]
-[editable path="delmon"]
-[editable path="delmon/Charecter_Dialog_Area"]
 [editable path="story_layer/ch1_01"]
 [editable path="story_layer/ch1_02"]
+[editable path="delmon"]
+[editable path="delmon/Charecter_Dialog_Area"]
