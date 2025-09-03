@@ -35,6 +35,9 @@ self_modulate = Color(0.741176, 0.741176, 0.741176, 1)
 top_level = true
 tile_map_data = PackedByteArray("AAAZACIABgAOAAsAADA=")
 
+[node name="Door" parent="Forniture3" index="11"]
+scale = Vector2(1, 1)
+
 [node name="Upperforniture" parent="Forniture3" index="12"]
 top_level = true
 y_sort_enabled = true
