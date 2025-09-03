@@ -3,12 +3,12 @@ class_name Player
 
 @onready var character := $Kyoto
 
-@export var current_character := "kyoto"
+@export var current_character := "chilfie"
 
 var max_speed := 80.0
 var acceleration := 400.0
 var friction := 750.0
-var last_direction := "f"  # for idle direction (f = front, b = back, r = right)
+var last_direction := "r"  # for idle direction (f = front, b = back, r = right)
 
 var triggered := true
 

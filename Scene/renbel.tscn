@@ -100,6 +100,7 @@ size = Vector2(33, 60)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -29)
 sprite_frames = SubResource("SpriteFrames_jt1x7")
 animation = &"walk_f"
 metadata/_aseprite_wizard_interface_config_ = {
@@ -122,11 +123,11 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "62d117662fac1e3390dc7994c0e738b9"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 29)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_rui40")
 
 [node name="Charecter_Dialog_Area" parent="." instance=ExtResource("1_01qcs")]
+position = Vector2(0, -29)
 
 [node name="CollisionShape2D" parent="Charecter_Dialog_Area" index="0"]
 position = Vector2(-0.5, 1)
