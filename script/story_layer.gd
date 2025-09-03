@@ -37,17 +37,22 @@ func _input(event: InputEvent) -> void:
 			trigger = 0
 			trig = false
 			
-		elif trigger == 0:
-			$"../delmon/AnimatedSprite2D".play("idle_f")
+		match trigger:
+			0:
+				$"../delmon/AnimatedSprite2D".play("idle_f")
+			2:
+				AudioManager.play("DoorKnocking")
+			5:
+				AudioManager.play("DoorOpen")
+
+		trigger += 1
 		
-		else:
-			trigger += 1
-			
+		
 	elif event.is_action_pressed("Skip") and event_index == 2:
 		if trigger >= 20 or !trig:
 			trigger = 0
 			trig = true
-		
+			
 		elif trigger == 1:
 			$"../BlackBackground".visible = false
 			$"../player".position = Vector2(500,450)
@@ -60,7 +65,6 @@ func _input(event: InputEvent) -> void:
 			$"../chilfie".visible = true
 			$"../chilfie/AnimatedSprite2D".play("idle_r")
 			$"../chilfie/AnimatedSprite2D".flip_h = true
-			
 		elif trigger == 5:
 			$"../julius".visible = true
 			

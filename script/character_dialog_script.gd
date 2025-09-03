@@ -92,6 +92,7 @@ func conver_text():
 
 func scroll_text(input_text: String) -> void:
 	$text_dialog_bag/continu.visible = false
+	AudioManager.play('Talk')
 	if input_text:
 		label_text_dialog.text = input_text
 	else:
@@ -102,13 +103,14 @@ func scroll_text(input_text: String) -> void:
 	for i in range(input_text.length()):
 		if tag and !on_play:
 			tag = false
+			AudioManager.stop()
 			break
 		label_text_dialog.visible_characters += 1
 		if get_tree():
 			await get_tree().create_timer(0.05).timeout
 	on_play = false
 	$text_dialog_bag/continu.visible = true
-
+	AudioManager.stop()
 func next_conver():
 	if sub_dialog.size() > 0:
 		sub_sub_dialog_pro = true

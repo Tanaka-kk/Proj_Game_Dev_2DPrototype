@@ -61,7 +61,11 @@ func _physics_process(delta):
 		character.play(anim)
 		
 	input_direction = input_direction.normalized()
-
+if velocity.x != 0 and is_on_floor():
+	if !walk.playing:
+		walk.play()
+elif walk.playing:
+	walk.stop()
 	if input_direction != Vector2.ZERO:
 		velocity = velocity.move_toward(input_direction * max_speed, acceleration * delta)
 	else:
