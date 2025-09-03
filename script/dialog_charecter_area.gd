@@ -19,6 +19,7 @@ func _on_area_exited(area: Area2D) -> void:
 
 func _on_instant_area_body_entered(body: Node2D) -> void:
 	if body is Player :
-		SignalBusser.emit_signal("display_char_dialog", dialog_key)
+		if dialog_key != "":
+			SignalBusser.emit_signal("display_char_dialog", dialog_key)
 		area_active = true
 		#SignalBusser.emit_signal("change_event")

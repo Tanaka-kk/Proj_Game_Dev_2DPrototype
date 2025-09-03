@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="1_c5njw"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="1_m25rx"]
-[ext_resource type="Script" uid="uid://42hyxa0j42dn" path="res://script/owner_room.gd" id="1_riwjv"]
+[ext_resource type="Script" path="res://script/owner_room.gd" id="1_riwjv"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="2_c5njw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riwjv"]
@@ -67,7 +67,7 @@ shape = SubResource("RectangleShape2D_riwjv")
 [node name="Enter_mark_point" parent="." instance=ExtResource("2_c5njw")]
 
 [node name="world_2" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(750, 362)
+position = Vector2(713, 406)
 
 [editable path="Forniture"]
 [editable path="Screen_tranfer_Trigger_Area"]
