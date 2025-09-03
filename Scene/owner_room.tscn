@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="2_c5njw"]
 [ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="5_0gcao"]
 [ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_iexjt"]
-[ext_resource type="Script" uid="uid://cmnm5nepmi7pg" path="res://Scene/story_owner.gd" id="6_usjdx"]
+[ext_resource type="Script" path="res://Scene/story_owner.gd" id="6_usjdx"]
 [ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="9_57seq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riwjv"]
@@ -86,7 +86,7 @@ visible = false
 script = ExtResource("6_usjdx")
 
 [node name="Charecter_Dialog_Area" parent="story_owner" instance=ExtResource("6_iexjt")]
-dialog_key = "Or_Ch1"
+dialog_key = "Owner_Ch1"
 
 [node name="CollisionShape2D" parent="story_owner/Charecter_Dialog_Area" index="0"]
 position = Vector2(816, 358.5)
@@ -96,7 +96,7 @@ shape = SubResource("RectangleShape2D_iexjt")
 position = Vector2(818.5, 353.5)
 
 [node name="Charecter_Dialog_Area2" parent="story_owner" instance=ExtResource("6_iexjt")]
-dialog_key = "Or_Ch2"
+dialog_key = "Owner_Ch2"
 
 [node name="CollisionShape2D" parent="story_owner/Charecter_Dialog_Area2" index="0"]
 position = Vector2(733.75, 329.25)
