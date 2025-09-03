@@ -14,7 +14,6 @@ func _ready() -> void:
 	$"../renbel".visible = true
 	$"../ryou".visible = true
 	$"../player".last_direction = "b"
-	
 	#await get_tree().create_timer(4).timeout
 	#activate_sig()
 	
