@@ -40,6 +40,7 @@ func _input(event: InputEvent) -> void:
 				tag = true
 
 func display_con(key_id_time_line):
+	print("lllooo")
 	key_id = key_id_time_line
 	if in_progress:
 		if sub_dialog.size() > 0:
@@ -92,7 +93,7 @@ func conver_text():
 
 func scroll_text(input_text: String) -> void:
 	$text_dialog_bag/continu.visible = false
-	AudioManager.play('Talk')
+	#Audio start
 	if input_text:
 		label_text_dialog.text = input_text
 	else:
@@ -103,14 +104,14 @@ func scroll_text(input_text: String) -> void:
 	for i in range(input_text.length()):
 		if tag and !on_play:
 			tag = false
-			AudioManager.stop()
 			break
 		label_text_dialog.visible_characters += 1
 		if get_tree():
 			await get_tree().create_timer(0.05).timeout
+	#Audio stop
 	on_play = false
 	$text_dialog_bag/continu.visible = true
-	AudioManager.stop()
+
 func next_conver():
 	if sub_dialog.size() > 0:
 		sub_sub_dialog_pro = true

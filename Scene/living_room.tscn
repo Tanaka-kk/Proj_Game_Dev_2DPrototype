@@ -1,12 +1,24 @@
-[gd_scene load_steps=6 format=4 uid="uid://vcu2q4wo6wr6"]
+[gd_scene load_steps=16 format=4 uid="uid://vcu2q4wo6wr6"]
 
 [ext_resource type="Script" uid="uid://b1f4x7l15i4aw" path="res://script/World_base_script/room.gd" id="1_v6ont"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="2_1nji3"]
+[ext_resource type="Script" uid="uid://ecsp4gs3mboy" path="res://Scene/story_living.gd" id="5_0c3fy"]
+[ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_ele34"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="7_l7hj5"]
+[ext_resource type="PackedScene" uid="uid://b4d2c8m58oit2" path="res://Scene/delmon.tscn" id="7_vitcg"]
+[ext_resource type="PackedScene" uid="uid://dovtksugk4xoo" path="res://Scene/julius.tscn" id="8_kiqjd"]
+[ext_resource type="PackedScene" uid="uid://cfytp7hyqfkn4" path="res://Scene/kyoto.tscn" id="9_pbccy"]
+[ext_resource type="PackedScene" uid="uid://c4nef5x01tmdy" path="res://Scene/renbel.tscn" id="10_jvgng"]
+[ext_resource type="PackedScene" uid="uid://dhjv7l0tjy251" path="res://Scene/ryou.tscn" id="11_2wob0"]
+[ext_resource type="PackedScene" uid="uid://c87ofyvhdxi7s" path="res://Scene/player.tscn" id="12_jcx0t"]
+[ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="13_kiqjd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xfd2"]
 size = Vector2(33.5, 9.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uo1dq"]
+size = Vector2(27, 26)
 
 [node name="living_room" type="Node2D"]
 y_sort_enabled = true
@@ -65,7 +77,59 @@ shape = SubResource("RectangleShape2D_4xfd2")
 position = Vector2(6, 22)
 
 [node name="world_1" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(83, 131)
+position = Vector2(82, 182)
+
+[node name="story" type="Node2D" parent="."]
+script = ExtResource("5_0c3fy")
+
+[node name="Charecter_Dialog_Area" parent="story" instance=ExtResource("6_ele34")]
+dialog_key = "Ch1_03"
+
+[node name="CollisionShape2D" parent="story/Charecter_Dialog_Area" index="0"]
+position = Vector2(74, 150)
+shape = SubResource("RectangleShape2D_uo1dq")
+
+[node name="delmon" parent="." instance=ExtResource("7_vitcg")]
+visible = false
+position = Vector2(168, 99)
+scale = Vector2(0.5, 0.5)
+
+[node name="julius" parent="." instance=ExtResource("8_kiqjd")]
+visible = false
+position = Vector2(31, 115)
+scale = Vector2(0.5, 0.5)
+
+[node name="kyoto" parent="." instance=ExtResource("9_pbccy")]
+visible = false
+position = Vector2(138, 160)
+scale = Vector2(0.5, 0.5)
+
+[node name="renbel" parent="." instance=ExtResource("10_jvgng")]
+visible = false
+position = Vector2(237, 122)
+scale = Vector2(0.5, 0.5)
+
+[node name="ryou" parent="." instance=ExtResource("11_2wob0")]
+visible = false
+position = Vector2(74, 155)
+scale = Vector2(0.5, 0.5)
+
+[node name="player" parent="." instance=ExtResource("12_jcx0t")]
+position = Vector2(86, 205)
+scale = Vector2(0.5, 0.5)
+
+[node name="Character_Dialog_Layer" parent="." instance=ExtResource("13_kiqjd")]
 
 [editable path="Forniture"]
 [editable path="Screen_tranfer_Trigger_Area"]
+[editable path="story/Charecter_Dialog_Area"]
+[editable path="delmon"]
+[editable path="delmon/Charecter_Dialog_Area"]
+[editable path="julius"]
+[editable path="julius/Charecter_Dialog_Area"]
+[editable path="kyoto"]
+[editable path="kyoto/Charecter_Dialog_Area"]
+[editable path="renbel"]
+[editable path="renbel/Charecter_Dialog_Area"]
+[editable path="ryou"]
+[editable path="ryou/Charecter_Dialog_Area"]
