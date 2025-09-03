@@ -1,17 +1,24 @@
-[gd_scene load_steps=9 format=4 uid="uid://fcf1hhwwo0cl"]
+[gd_scene load_steps=14 format=4 uid="uid://fcf1hhwwo0cl"]
 
 [ext_resource type="Script" uid="uid://csyycvbtvcuqx" path="res://script/World_base_script/world_2.gd" id="1_vxwit"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="2_2daeh"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="3_sy63j"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="4_w3sbn"]
 [ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="5_2daeh"]
+[ext_resource type="Script" uid="uid://dlbgcii2apfnu" path="res://Scene/story_world_2.gd" id="7_ctgo3"]
+[ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="8_ctgo3"]
+[ext_resource type="PackedScene" uid="uid://dovtksugk4xoo" path="res://Scene/julius.tscn" id="9_2asyp"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="9_ctgo3"]
+[ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="10_87qac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aujit"]
 size = Vector2(36, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trsgs"]
 size = Vector2(12.5, 35.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87qac"]
+size = Vector2(59, 49)
 
 [node name="world_2" type="Node2D"]
 y_sort_enabled = true
@@ -60,13 +67,34 @@ shape = SubResource("RectangleShape2D_trsgs")
 [node name="Enter_mark_point" parent="." instance=ExtResource("4_w3sbn")]
 
 [node name="world_1" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(832, 451)
+position = Vector2(794, 454)
 
 [node name="owner_room" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(889, 570)
+position = Vector2(931, 550)
+
+[node name="living_room" type="Marker2D" parent="Enter_mark_point"]
+position = Vector2(794, 455)
 
 [node name="Inventory_UI_Layer" parent="." instance=ExtResource("5_2daeh")]
+
+[node name="story_world2" type="Node2D" parent="."]
+script = ExtResource("7_ctgo3")
+
+[node name="Charecter_Dialog_Area" parent="story_world2" instance=ExtResource("8_ctgo3")]
+
+[node name="CollisionShape2D" parent="story_world2/Charecter_Dialog_Area/Instant_area" index="0"]
+position = Vector2(815.5, 456.5)
+shape = SubResource("RectangleShape2D_87qac")
+
+[node name="julius" parent="." instance=ExtResource("9_2asyp")]
+position = Vector2(756, 451)
+scale = Vector2(0.5, 0.5)
+
+[node name="Character_Dialog_Layer" parent="." instance=ExtResource("10_87qac")]
 
 [editable path="Forniture2"]
 [editable path="Screen_tranfer_Trigger_Area2"]
 [editable path="Screen_tranfer_Trigger_Area"]
+[editable path="story_world2/Charecter_Dialog_Area"]
+[editable path="julius"]
+[editable path="julius/Charecter_Dialog_Area"]

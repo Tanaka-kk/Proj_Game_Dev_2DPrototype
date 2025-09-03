@@ -110,6 +110,7 @@ func _input(event: InputEvent) -> void:
 		
 		elif trigger == 13:
 			$"../player".last_direction = "b"
+			$"../player".current_character = "chilfie"
 			SenceManager.change_screen(get_owner(), "living_room")
 			trigger += 1
 			

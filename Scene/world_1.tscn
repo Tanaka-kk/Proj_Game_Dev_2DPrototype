@@ -107,10 +107,10 @@ shape = SubResource("RectangleShape2D_yyhej")
 [node name="Enter_mark_point" parent="." instance=ExtResource("13_1vh8x")]
 
 [node name="living_room" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(698, 367)
+position = Vector2(753, 343)
 
 [node name="world_2" type="Marker2D" parent="Enter_mark_point"]
-position = Vector2(736, 441)
+position = Vector2(773, 441)
 
 [node name="cellar" type="Marker2D" parent="Enter_mark_point"]
 position = Vector2(832, 481)
