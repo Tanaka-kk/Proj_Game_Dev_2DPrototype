@@ -18,6 +18,7 @@
 			"ITEM_key_1": {"inter_with": "OBJ_Main_door_01"},
 			"ITEM_key_2": {"inter_with": "OBJ_Main_01"},
 			"ITEM_book":{},
+			"ITEM_blood":{},
 			"no": {"inter_with": ""}
 		}
 	}

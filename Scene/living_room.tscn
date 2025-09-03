@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1f4x7l15i4aw" path="res://script/World_base_script/room.gd" id="1_v6ont"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="2_1nji3"]
-[ext_resource type="Script" uid="uid://ecsp4gs3mboy" path="res://Scene/story.gd" id="5_0c3fy"]
+[ext_resource type="Script" uid="uid://cmnm5nepmi7pg" path="res://Scene/story_owner.gd" id="5_0c3fy"]
 [ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_ele34"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="7_l7hj5"]

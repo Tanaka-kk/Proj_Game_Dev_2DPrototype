@@ -40,7 +40,7 @@ func _input(event: InputEvent) -> void:
 				tag = true
 
 func display_con(key_id_time_line):
-	print("lllooo")
+	
 	key_id = key_id_time_line
 	if in_progress:
 		if sub_dialog.size() > 0:

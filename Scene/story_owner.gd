@@ -8,7 +8,7 @@ var trigger = 0
 var trig = true
 
 func _ready() -> void:
-	#SignalBusser.emit_signal("display_char_dialog","Or_Ch1")
+	#SignalBusser.emit_signal("display_char_dialog","Or_Ch3")
 	area_trigger_story = get_children()
 	activate_event()
 

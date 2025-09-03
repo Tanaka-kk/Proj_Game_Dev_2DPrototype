@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c4ff2cx408efv"]
+[gd_scene load_steps=13 format=4 uid="uid://c4ff2cx408efv"]
 
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="1_c5njw"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="1_m25rx"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="2_c5njw"]
 [ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="5_0gcao"]
 [ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_iexjt"]
-[ext_resource type="Script" uid="uid://cmnm5nepmi7pg" path="res://Scene/story_owner.gd" id="6_usjdx"]
+[ext_resource type="Script" uid="uid://cmnm5nepmi7pg" path="res://Scene/story.gd" id="6_usjdx"]
+[ext_resource type="PackedScene" uid="uid://c87ofyvhdxi7s" path="res://Scene/player.tscn" id="8_usjdx"]
 [ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="9_57seq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riwjv"]
@@ -82,33 +83,37 @@ position = Vector2(750, 362)
 [node name="Character_Dialog_Layer" parent="." instance=ExtResource("5_0gcao")]
 visible = false
 
-[node name="story_owner" type="Node2D" parent="."]
+[node name="story" type="Node2D" parent="."]
 script = ExtResource("6_usjdx")
 
-[node name="Charecter_Dialog_Area" parent="story_owner" instance=ExtResource("6_iexjt")]
+[node name="Charecter_Dialog_Area" parent="story" instance=ExtResource("6_iexjt")]
 dialog_key = "Or_Ch1"
 
-[node name="CollisionShape2D" parent="story_owner/Charecter_Dialog_Area" index="0"]
+[node name="CollisionShape2D" parent="story/Charecter_Dialog_Area" index="0"]
 position = Vector2(816, 358.5)
 shape = SubResource("RectangleShape2D_iexjt")
 
-[node name="CollisionShape2D" parent="story_owner/Charecter_Dialog_Area/Instant_area" index="0"]
+[node name="CollisionShape2D" parent="story/Charecter_Dialog_Area/Instant_area" index="0"]
 position = Vector2(818.5, 353.5)
 
-[node name="Charecter_Dialog_Area2" parent="story_owner" instance=ExtResource("6_iexjt")]
+[node name="Charecter_Dialog_Area2" parent="story" instance=ExtResource("6_iexjt")]
 dialog_key = "Or_Ch2"
 
-[node name="CollisionShape2D" parent="story_owner/Charecter_Dialog_Area2" index="0"]
+[node name="CollisionShape2D" parent="story/Charecter_Dialog_Area2" index="0"]
 position = Vector2(733.75, 329.25)
 shape = SubResource("RectangleShape2D_57seq")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="story_owner/Charecter_Dialog_Area2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="story/Charecter_Dialog_Area2"]
 position = Vector2(664, 330)
 shape = SubResource("RectangleShape2D_57seq")
+
+[node name="player" parent="." instance=ExtResource("8_usjdx")]
+position = Vector2(714, 368)
+scale = Vector2(0.5, 0.5)
 
 [node name="Inventory_UI_Layer" parent="." instance=ExtResource("9_57seq")]
 
 [editable path="Forniture"]
 [editable path="Screen_tranfer_Trigger_Area"]
-[editable path="story_owner/Charecter_Dialog_Area"]
-[editable path="story_owner/Charecter_Dialog_Area2"]
+[editable path="story/Charecter_Dialog_Area"]
+[editable path="story/Charecter_Dialog_Area2"]
