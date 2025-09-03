@@ -1,11 +1,6 @@
-[gd_scene load_steps=21 format=4 uid="uid://bg4hk8eir30fo"]
+[gd_scene load_steps=13 format=4 uid="uid://bg4hk8eir30fo"]
 
 [ext_resource type="Script" uid="uid://oiyqwgk84rec" path="res://script/World_base_script/world.gd" id="1_lccqd"]
-[ext_resource type="Texture2D" uid="uid://ckh3a6471ung" path="res://Image/Character_Profile/rudolf_.jpg" id="3_aeth5"]
-[ext_resource type="Texture2D" uid="uid://ba10pey8nqah3" path="res://Image/Character_Profile/teio.jpg" id="4_vddpc"]
-[ext_resource type="Texture2D" uid="uid://b4oupmatu1fgr" path="res://Image/Item_icon/ITEM_key_1.jpg" id="5_cu5ai"]
-[ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_kfupk"]
-[ext_resource type="PackedScene" uid="uid://cb1yjfldunk86" path="res://Scene/interact_dialog_area.tscn" id="7_s4ug5"]
 [ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="8_4omoa"]
 [ext_resource type="PackedScene" uid="uid://bji5vp6e7ujm3" path="res://Scene/interact_dialog_layer.tscn" id="9_ldnv2"]
 [ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="10_i805u"]
@@ -14,16 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="13_1vh8x"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="14_8dymh"]
 [ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="17_6kb72"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdydh"]
-size = Vector2(21.25, 30.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mit0b"]
-size = Vector2(14.75, 36.875)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e32y8"]
-radius = 18.0
-height = 56.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dea2"]
 size = Vector2(11.0313, 50.875)
@@ -56,50 +41,6 @@ tile_map_data = PackedByteArray("AAA4ABYAAwAFAAQAADA4ABUAAwAFAAQAADAeACEAAwAAAAY
 [node name="Door" parent="Forniture2" index="11"]
 scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAAtABIAAwAIAAMAAAAtABMAAwAIAAQAAAAtABQAAwAIAAUAAAAuABIAAwAJAAMAAAAvABIAAwAJAAMAABAwABIAAwAIAAMAABAwABMAAwAIAAQAABAwABQAAwAIAAUAABA0ABoAAwAIAAMAAAA0ABsAAwAIAAQAAAA0ABwAAwAIAAUAAAA1ABoAAwAJAAMAAAA2ABoAAwAJAAMAABA3ABoAAwAIAAMAABA3ABsAAwAIAAQAABA3ABwAAwAIAAUAABA=")
-
-[node name="obj" type="Node2D" parent="."]
-
-[node name="Rudolf" type="Sprite2D" parent="obj"]
-position = Vector2(552, 326)
-scale = Vector2(0.0785527, 0.0769927)
-texture = ExtResource("3_aeth5")
-
-[node name="Teio" type="Sprite2D" parent="obj"]
-position = Vector2(795, 492)
-scale = Vector2(0.0884617, 0.132239)
-texture = ExtResource("4_vddpc")
-
-[node name="Key" type="Sprite2D" parent="obj"]
-position = Vector2(872, 487)
-rotation = 1.76856
-scale = Vector2(0.612304, 0.109374)
-texture = ExtResource("5_cu5ai")
-
-[node name="interact_area" type="Node2D" parent="."]
-
-[node name="Charecter_Dialog_Area" parent="interact_area" instance=ExtResource("6_kfupk")]
-position = Vector2(486, 147)
-dialog_key = "give_key_1"
-
-[node name="CollisionShape2D" parent="interact_area/Charecter_Dialog_Area" index="0"]
-position = Vector2(66, 179)
-shape = SubResource("RectangleShape2D_vdydh")
-
-[node name="Interact_Dialog_Area" parent="interact_area" instance=ExtResource("7_s4ug5")]
-position = Vector2(437, 491)
-dialog_key = "OBJ_Main_door_01"
-
-[node name="CollisionShape2D" parent="interact_area/Interact_Dialog_Area" index="0"]
-position = Vector2(454.625, -2.5625)
-shape = SubResource("RectangleShape2D_mit0b")
-
-[node name="Charecter_Dialog_Area2" parent="interact_area" instance=ExtResource("6_kfupk")]
-position = Vector2(31, 579)
-dialog_key = "start_joke"
-
-[node name="CollisionShape2D" parent="interact_area/Charecter_Dialog_Area2" index="0"]
-position = Vector2(763, -89)
-shape = SubResource("CapsuleShape2D_e32y8")
 
 [node name="Character_Dialog_Layer" parent="." instance=ExtResource("8_4omoa")]
 
@@ -152,9 +93,6 @@ scale = Vector2(5.39474, 5.92105)
 texture = ExtResource("14_8dymh")
 
 [editable path="Forniture2"]
-[editable path="interact_area/Charecter_Dialog_Area"]
-[editable path="interact_area/Interact_Dialog_Area"]
-[editable path="interact_area/Charecter_Dialog_Area2"]
 [editable path="Screen_tranfer_Trigger_Area"]
 [editable path="Screen_tranfer_Trigger_Area2"]
 [editable path="Screen_tranfer_Trigger_Area3"]
