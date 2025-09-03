@@ -46,7 +46,6 @@ offset_bottom = 199.0
 [node name="Label" parent="Character_Dialog_Layer/text_dialog_bag" index="1"]
 offset_top = 4.0
 offset_bottom = 166.0
-autowrap_mode = 3
 
 [node name="char_profile" parent="Character_Dialog_Layer/Profile_picture" index="1"]
 scale = Vector2(0.16, 0.144)
@@ -66,9 +65,6 @@ offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" parent="Character_Dialog_Layer/narater_dialog/Panel" index="0"]
-visible = false
-
 [node name="Label" parent="Character_Dialog_Layer/narater_dialog" index="1"]
 layout_mode = 1
 anchors_preset = 8
@@ -82,7 +78,6 @@ offset_right = 683.0
 offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
-autowrap_mode = 3
 
 [node name="BlackBackground" type="Sprite2D" parent="."]
 visible = false
