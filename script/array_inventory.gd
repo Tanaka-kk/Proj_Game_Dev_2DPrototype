@@ -25,7 +25,7 @@ func generate_slot() -> void:
 		for ind in range(GlobalInv.inv_slots.size()):
 			var button_tx := Button.new()
 			button_tx.pressed.connect(select_item.bind(ind))
-			button_tx.custom_minimum_size = Vector2(100, 100)
+			button_tx.custom_minimum_size = Vector2(160, 160)
 			grid_i.add_child(button_tx)
 
 func select_item(index: int) -> void:
@@ -40,5 +40,5 @@ func load_invent() -> void:
 			var name_ = GlobalInv.inv_slots[i]
 			but.icon = null
 			if name_ != null:
-				var path_full = icon_dir + str(name_) + ".jpg"
+				var path_full = icon_dir + str(name_) + ".png"
 				but.icon = load(path_full)
