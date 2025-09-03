@@ -41,6 +41,11 @@ func display_con(key_id_time_line):
 		frame.visible = true
 		get_tree().paused = true
 		in_progress = true
+<<<<<<< Updated upstream
+=======
+		bg.visible = true
+		print(key_id_time_line)
+>>>>>>> Stashed changes
 		selected_event = timeline[key_id_time_line].duplicate()
 		process_text()
 
