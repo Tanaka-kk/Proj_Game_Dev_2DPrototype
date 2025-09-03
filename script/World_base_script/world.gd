@@ -1,4 +1,7 @@
 extends BaseScene
-
-func _ready() -> void:
-	get_tree().paused = false
+	
+func _process(delta: float) -> void:
+	if $Screen_tranfer_Trigger_Area.in_area:
+		$Forniture2/Door.visible = true
+	else:
+		$Forniture2/Door.visible = false

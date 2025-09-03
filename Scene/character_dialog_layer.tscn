@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cl16hinyu50v2"]
+[gd_scene load_steps=19 format=3 uid="uid://cl16hinyu50v2"]
 
 [ext_resource type="Script" uid="uid://cchhv1woyihes" path="res://script/character_dialog_script.gd" id="1_73p86"]
 [ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_wyocy"]
@@ -15,8 +15,55 @@
 
 [sub_resource type="Theme" id="Theme_na7qg"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_na7qg"]
+line_spacing = 4.0
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_iflwg"]
+font_size = 20
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ialet"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jvgqs")
+}],
+"loop": true,
+"name": &"Chilfie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_na7qg")
+}],
+"loop": true,
+"name": &"Delmon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_iflwg")
+}],
+"loop": true,
+"name": &"Julius",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_emcmp")
+}],
+"loop": true,
+"name": &"Kyoto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_we0j7")
+}],
+"loop": true,
+"name": &"Renbel",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_ft204")
@@ -25,62 +72,22 @@ animations = [{
 "name": &"Riko",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"banarak",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_jvgqs")
-}],
-"loop": true,
-"name": &"chilfie",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_na7qg")
-}],
-"loop": true,
-"name": &"delmon",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_iflwg")
-}],
-"loop": true,
-"name": &"julius",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_emcmp")
-}],
-"loop": true,
-"name": &"kyoto",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_we0j7")
-}],
-"loop": true,
-"name": &"renbel",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("10_gjg53")
 }],
 "loop": true,
-"name": &"ryou",
+"name": &"Ryou",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"banarak",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
@@ -91,6 +98,10 @@ animations = [{
 "name": &"xxx",
 "speed": 5.0
 }]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jvgqs"]
+line_spacing = 4.0
+font_size = 48
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jvgqs"]
 
@@ -145,6 +156,31 @@ offset_right = 1352.0
 offset_bottom = 184.0
 theme = SubResource("Theme_na7qg")
 theme_override_font_sizes/font_size = 32
+label_settings = SubResource("LabelSettings_na7qg")
+
+[node name="continu" type="Control" parent="text_dialog_bag"]
+anchors_preset = 0
+offset_left = 1120.0
+offset_top = -89.0
+offset_right = 1160.0
+offset_bottom = -49.0
+
+[node name="Panel" type="Panel" parent="text_dialog_bag/continu"]
+custom_minimum_size = Vector2(264, 72)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("4_jvgqs")
+
+[node name="Label" type="Label" parent="text_dialog_bag/continu"]
+layout_mode = 0
+offset_top = 17.0
+offset_right = 264.0
+offset_bottom = 72.0
+text = "Spacebar for continue"
+label_settings = SubResource("LabelSettings_iflwg")
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Profile_picture" type="Control" parent="."]
 layout_mode = 3
@@ -174,10 +210,13 @@ theme = ExtResource("4_jvgqs")
 
 [node name="Label" type="Label" parent="Profile_picture"]
 layout_mode = 2
-offset_left = 488.0
-offset_top = 286.0
-offset_right = 720.0
-offset_bottom = 326.0
+offset_left = 478.0
+offset_top = 270.0
+offset_right = 728.0
+offset_bottom = 337.0
+label_settings = SubResource("LabelSettings_jvgqs")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="narater_dialog" type="Control" parent="."]
 layout_mode = 3
@@ -189,6 +228,7 @@ offset_bottom = 482.0
 
 [node name="Panel" type="Panel" parent="narater_dialog"]
 custom_minimum_size = Vector2(1384, 200)
+layout_mode = 0
 offset_right = 1384.0
 offset_bottom = 200.0
 theme = ExtResource("4_jvgqs")
@@ -202,6 +242,7 @@ offset_right = 45.0
 offset_bottom = 45.0
 
 [node name="Label" type="Label" parent="narater_dialog"]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 20.0
 offset_right = 1352.0

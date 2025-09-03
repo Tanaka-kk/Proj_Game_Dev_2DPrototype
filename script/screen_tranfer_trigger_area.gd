@@ -9,10 +9,14 @@ var in_area = false
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player:
 		in_area = false
+		$CollisionShape2D/Press.position = $CollisionShape2D.position + Vector2(10,-32)
+		$CollisionShape2D/Press.visible = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		in_area = true
+		$CollisionShape2D/Press.position = $CollisionShape2D.position + Vector2(10,-32)
+		$CollisionShape2D/Press.visible = true
 
 func _input(event: InputEvent) -> void:
 	if in_area and event.is_action_pressed("interact"):

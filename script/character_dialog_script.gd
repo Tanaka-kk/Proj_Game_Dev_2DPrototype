@@ -22,6 +22,8 @@ var sub_sub_dialog_pro = false
 var select_sd
 var key_id = ""
 var mode = ""
+var tag = false
+var on_play = false
 
 func _ready() -> void:
 	timeline = DialogLoader.json_data['dialog_timeline']['content']
@@ -31,9 +33,11 @@ func _ready() -> void:
 	SignalBusser.connect("display_char_dialog",display_con)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("Skip"):
 		if key_id != "":
 			display_con(key_id)
+			if on_play:
+				tag = true
 
 func display_con(key_id_time_line):
 	key_id = key_id_time_line
@@ -44,6 +48,7 @@ func display_con(key_id_time_line):
 		elif selected_event.size() > 0:
 			process_text()
 		else:
+			key_id = ""
 			finish()
 	else:
 		frame.visible = true
@@ -74,9 +79,8 @@ func process_text():
 		conver_text()
 
 func conver_text():
-	
 	select_sd = sub_dialog.pop_front()
-	label_text_dialog.text = select_sd['line']
+	scroll_text(select_sd['line'])
 	var char_eng_name = matcher(select_sd["char"])
 	if char_eng_name == "":
 		pic_pro.visible = false
@@ -85,7 +89,26 @@ func conver_text():
 		pic_pro.visible = true
 		pic_pro.play(char_eng_name)
 		label_char_name.text = char_eng_name
-	
+
+func scroll_text(input_text: String) -> void:
+	$text_dialog_bag/continu.visible = false
+	if input_text:
+		label_text_dialog.text = input_text
+	else:
+		label_text_dialog.text = ""
+		
+	on_play = true
+	label_text_dialog.visible_characters = 0
+	for i in range(input_text.length()):
+		if tag and !on_play:
+			tag = false
+			break
+		label_text_dialog.visible_characters += 1
+		if get_tree():
+			await get_tree().create_timer(0.05).timeout
+	on_play = false
+	$text_dialog_bag/continu.visible = true
+
 func next_conver():
 	if sub_dialog.size() > 0:
 		sub_sub_dialog_pro = true
@@ -119,12 +142,12 @@ func finish():
 
 func matcher(thai_name: String):
 	match thai_name:
-		"เรียว": return "ryou"
-		"จูเลียส": return "julius"
-		"เร็นเบล": return "renbel"
-		"เคียว": return "kyoto"
-		"เดลม่อน": return "delmon"
-		"ชิลฟี่": return "chilfie"
+		"เรียว": return "Ryou"
+		"จูเลียส": return "Julius"
+		"เร็นเบล": return "Renbel"
+		"เคียว": return "Kyoto"
+		"เดลม่อน": return "Delmon"
+		"ชิลฟี่": return "Chilfie"
 		"ริโกะ": return "Riko"
 		"เทพชะตา": return "xxx"
 		"บรรณารักษ์": return "xxx"

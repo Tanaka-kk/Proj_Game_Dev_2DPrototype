@@ -37,6 +37,7 @@ position = Vector2(960, 400)
 texture = ExtResource("5_4ad6s")
 
 [node name="Character_Dialog_Layer" parent="." instance=ExtResource("6_7136s")]
+visible = false
 
 [node name="Panel" parent="Character_Dialog_Layer/text_dialog_bag" index="0"]
 offset_top = -1.0

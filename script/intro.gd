@@ -42,5 +42,6 @@ func change_se():
 	for i in 11:
 		$BlackBackground.modulate.a = 0.1*i
 		await get_tree().create_timer(0.15).timeout
+	await get_tree().create_timer(1).timeout
 	SignalBusser.disconnect("finish_dia",change_se)
 	get_tree().change_scene_to_packed(world)
