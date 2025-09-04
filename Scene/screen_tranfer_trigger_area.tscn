@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2tsi8fyclbhu"]
+[gd_scene load_steps=4 format=3 uid="uid://cgekle46gxk7j"]
 
-[ext_resource type="Script" uid="uid://dht88buwrs4fh" path="res://script/screen_tranfer_trigger_area.gd" id="1_e3fit"]
-[ext_resource type="Texture2D" path="res://Asset/Tiles/black_background.png" id="2_cvlxe"]
+[ext_resource type="Script" uid="uid://tc8dxpyxrwu6" path="res://script/screen_tranfer_trigger_area.gd" id="1_e3fit"]
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_cvlxe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvlxe"]
 font_size = 8

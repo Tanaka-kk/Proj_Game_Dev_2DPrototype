@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsge2txr4e58h"]
+[gd_scene load_steps=2 format=3 uid="uid://bh0qfu8f8afk2"]
 
-[ext_resource type="Script" uid="uid://c1rm3pqfyhejc" path="res://script/setting_interface_layer.gd" id="1_sy4rw"]
+[ext_resource type="Script" uid="uid://dex80bqhf5kpu" path="res://script/setting_interface_layer.gd" id="1_sy4rw"]
 
 [node name="Setting_Interface_Layer" type="CanvasLayer"]
 process_mode = 3

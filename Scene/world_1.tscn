@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4d2c8m58oit2" path="res://Scene/delmon.tscn" id="10_42d6j"]
 [ext_resource type="PackedScene" uid="uid://y8bmdj6sfp2x" path="res://Scene/inventory_ui_layer.tscn" id="10_i805u"]
 [ext_resource type="PackedScene" uid="uid://c87ofyvhdxi7s" path="res://Scene/player.tscn" id="11_4t3x1"]
-[ext_resource type="Script" uid="uid://dpga73m7tc3f5" path="res://script/story_layer.gd" id="11_i1oxt"]
+[ext_resource type="Script" path="res://script/story_layer.gd" id="11_i1oxt"]
 [ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="12_g481w"]
 [ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="13_1vh8x"]
 [ext_resource type="Texture2D" uid="uid://c54uyi5nqunfn" path="res://Image/Object_icon/InventoryRect.png" id="14_8dymh"]

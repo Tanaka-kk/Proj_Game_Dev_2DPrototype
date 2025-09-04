@@ -1,8 +1,8 @@
-[gd_scene load_steps=31 format=4 uid="uid://ysl81wfhfpgh"]
+[gd_scene load_steps=31 format=4 uid="uid://c87ofyvhdxi7s"]
 
-[ext_resource type="Script" uid="uid://uh3e4onej04c" path="res://script/player.gd" id="1_3x5gi"]
-[ext_resource type="Texture2D" path="res://Image/Character_Profile/tex_support_card_30028.png" id="2_atds7"]
-[ext_resource type="PackedScene" uid="uid://bsge2txr4e58h" path="res://Scene/setting_interface_layer.tscn" id="3_xa75v"]
+[ext_resource type="Script" uid="uid://h1yj51g1cop0" path="res://script/player.gd" id="1_3x5gi"]
+[ext_resource type="Texture2D" uid="uid://ccigagpmywj1c" path="res://Image/Character_Profile/tex_support_card_30028.png" id="2_atds7"]
+[ext_resource type="PackedScene" uid="uid://bh0qfu8f8afk2" path="res://Scene/setting_interface_layer.tscn" id="3_xa75v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x5gi"]
 size = Vector2(22.5, 6)

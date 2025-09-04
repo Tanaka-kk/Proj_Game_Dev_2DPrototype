@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://dd3itvnv405qr"]
 
-[ext_resource type="Script" uid="uid://dhiben0rbahcs" path="res://script/intro.gd" id="1_1rpvy"]
-[ext_resource type="Texture2D" path="res://Asset/Tiles/black_background.png" id="1_gjrx4"]
-[ext_resource type="PackedScene" uid="uid://cpe2bt8622fhe" path="res://Scene/world_1.tscn" id="2_6omm5"]
-[ext_resource type="Texture2D" path="res://Asset/Tiles/white_backgroud.png" id="2_iysgs"]
-[ext_resource type="Texture2D" uid="uid://dev2t52haj5xh" path="res://Asset/Tiles/Book.png" id="3_1rpvy"]
-[ext_resource type="Texture2D" uid="uid://doob77fmk3fga" path="res://Asset/Tiles/Intro1.png" id="4_6omm5"]
-[ext_resource type="Texture2D" uid="uid://b856rh5r0sa0a" path="res://Asset/Tiles/Intro2.png" id="5_4ad6s"]
-[ext_resource type="PackedScene" uid="uid://cmw4t7hw85yry" path="res://Scene/character_dialog_layer.tscn" id="6_7136s"]
+[ext_resource type="Script" uid="uid://bmpe7wuuwva70" path="res://script/intro.gd" id="1_1rpvy"]
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="1_gjrx4"]
+[ext_resource type="PackedScene" uid="uid://bg4hk8eir30fo" path="res://Scene/world_1.tscn" id="2_6omm5"]
+[ext_resource type="Texture2D" uid="uid://cv616st5j81hh" path="res://Asset/Tiles/white_backgroud.png" id="2_iysgs"]
+[ext_resource type="Texture2D" uid="uid://b31gg3ejof2f4" path="res://Asset/Tiles/Book.png" id="3_1rpvy"]
+[ext_resource type="Texture2D" uid="uid://c1rrk0qa0gdh5" path="res://Asset/Tiles/Intro1.png" id="4_6omm5"]
+[ext_resource type="Texture2D" uid="uid://bnb8yslqykopf" path="res://Asset/Tiles/Intro2.png" id="5_4ad6s"]
+[ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="6_7136s"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_1rpvy")

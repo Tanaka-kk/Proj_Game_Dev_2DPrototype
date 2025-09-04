@@ -1,18 +1,18 @@
 [gd_scene load_steps=16 format=4 uid="uid://vcu2q4wo6wr6"]
 
-[ext_resource type="Script" path="res://script/World_base_script/room.gd" id="1_v6ont"]
-[ext_resource type="PackedScene" path="res://Scene/forniture.tscn" id="2_1nji3"]
-[ext_resource type="Texture2D" path="res://Asset/Tiles/black_background.png" id="2_pbccy"]
-[ext_resource type="Script" uid="uid://upl8j84c6ixn" path="res://Scene/story_living.gd" id="5_0c3fy"]
-[ext_resource type="PackedScene" uid="uid://dlymvly7suqbg" path="res://Scene/charecter_dialog_area.tscn" id="6_ele34"]
-[ext_resource type="PackedScene" uid="uid://b2tsi8fyclbhu" path="res://Scene/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
-[ext_resource type="PackedScene" path="res://Scene/enter_mark_point.tscn" id="7_l7hj5"]
-[ext_resource type="PackedScene" uid="uid://c6t2i6pjbae1w" path="res://Scene/delmon.tscn" id="7_vitcg"]
-[ext_resource type="PackedScene" uid="uid://do6kpr2grioyf" path="res://Scene/julius.tscn" id="8_kiqjd"]
-[ext_resource type="PackedScene" uid="uid://c3wlm6xhh548" path="res://Scene/kyoto.tscn" id="9_pbccy"]
-[ext_resource type="PackedScene" uid="uid://dxg4txuku5ont" path="res://Scene/renbel.tscn" id="10_jvgng"]
-[ext_resource type="PackedScene" uid="uid://c6y2ogcjj5mfd" path="res://Scene/ryou.tscn" id="11_2wob0"]
-[ext_resource type="PackedScene" uid="uid://cmw4t7hw85yry" path="res://Scene/character_dialog_layer.tscn" id="13_kiqjd"]
+[ext_resource type="Script" uid="uid://b1f4x7l15i4aw" path="res://script/World_base_script/room.gd" id="1_v6ont"]
+[ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="2_1nji3"]
+[ext_resource type="Texture2D" uid="uid://d2v3ecylver60" path="res://Asset/Tiles/black_background.png" id="2_pbccy"]
+[ext_resource type="Script" uid="uid://ecsp4gs3mboy" path="res://Scene/story_living.gd" id="5_0c3fy"]
+[ext_resource type="PackedScene" uid="uid://dqg8mt7yhror0" path="res://Scene/charecter_dialog_area.tscn" id="6_ele34"]
+[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="6_tu15h"]
+[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="7_l7hj5"]
+[ext_resource type="PackedScene" uid="uid://b4d2c8m58oit2" path="res://Scene/delmon.tscn" id="7_vitcg"]
+[ext_resource type="PackedScene" uid="uid://dovtksugk4xoo" path="res://Scene/julius.tscn" id="8_kiqjd"]
+[ext_resource type="PackedScene" uid="uid://cfytp7hyqfkn4" path="res://Scene/kyoto.tscn" id="9_pbccy"]
+[ext_resource type="PackedScene" uid="uid://c4nef5x01tmdy" path="res://Scene/renbel.tscn" id="10_jvgng"]
+[ext_resource type="PackedScene" uid="uid://dhjv7l0tjy251" path="res://Scene/ryou.tscn" id="11_2wob0"]
+[ext_resource type="PackedScene" uid="uid://cl16hinyu50v2" path="res://Scene/character_dialog_layer.tscn" id="13_kiqjd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xfd2"]
 size = Vector2(33.5, 9.125)
@@ -94,40 +94,25 @@ visible = false
 position = Vector2(168, 99)
 scale = Vector2(0.5, 0.5)
 
-[node name="Charecter_Dialog_Area" parent="delmon" index="2"]
-dialog_key = null
-
 [node name="julius" parent="." instance=ExtResource("8_kiqjd")]
 visible = false
 position = Vector2(31, 115)
 scale = Vector2(0.5, 0.5)
-
-[node name="Charecter_Dialog_Area" parent="julius" index="2"]
-dialog_key = null
 
 [node name="kyoto" parent="." instance=ExtResource("9_pbccy")]
 visible = false
 position = Vector2(138, 160)
 scale = Vector2(0.5, 0.5)
 
-[node name="Charecter_Dialog_Area" parent="kyoto" index="2"]
-dialog_key = null
-
 [node name="renbel" parent="." instance=ExtResource("10_jvgng")]
 visible = false
 position = Vector2(237, 122)
 scale = Vector2(0.5, 0.5)
 
-[node name="Charecter_Dialog_Area" parent="renbel" index="2"]
-dialog_key = null
-
 [node name="ryou" parent="." instance=ExtResource("11_2wob0")]
 visible = false
 position = Vector2(74, 155)
 scale = Vector2(0.5, 0.5)
-
-[node name="Charecter_Dialog_Area" parent="ryou" index="2"]
-dialog_key = null
 
 [node name="Character_Dialog_Layer" parent="." instance=ExtResource("13_kiqjd")]
 

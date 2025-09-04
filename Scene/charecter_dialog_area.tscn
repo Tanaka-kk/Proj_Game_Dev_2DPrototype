@@ -1,13 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlymvly7suqbg"]
+[gd_scene load_steps=2 format=3 uid="uid://dqg8mt7yhror0"]
 
-[ext_resource type="Script" uid="uid://doue0ln2rhrg3" path="res://script/dialog_charecter_area.gd" id="1_b4h6r"]
+[ext_resource type="Script" uid="uid://xfondc0d44gu" path="res://script/dialog_charecter_area.gd" id="1_b4h6r"]
 
 [node name="Charecter_Dialog_Area" type="Area2D"]
 process_mode = 3
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_b4h6r")
-dialog_key = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

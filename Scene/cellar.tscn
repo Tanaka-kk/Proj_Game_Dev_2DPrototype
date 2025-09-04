@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://ckfcmfs35wb5m"]
+[gd_scene load_steps=6 format=4 uid="uid://r6t1mt67vmwu"]
 
-[ext_resource type="PackedScene" uid="uid://b2tsi8fyclbhu" path="res://Scene/screen_tranfer_trigger_area.tscn" id="1_fmttx"]
+[ext_resource type="PackedScene" uid="uid://cgekle46gxk7j" path="res://Scene/screen_tranfer_trigger_area.tscn" id="1_fmttx"]
 [ext_resource type="Script" path="res://script/cellar.gd" id="1_wqxe4"]
-[ext_resource type="PackedScene" path="res://Scene/enter_mark_point.tscn" id="2_7k881"]
-[ext_resource type="PackedScene" path="res://Scene/forniture.tscn" id="2_ltomo"]
+[ext_resource type="PackedScene" uid="uid://bubeeeol3fveq" path="res://Scene/enter_mark_point.tscn" id="2_7k881"]
+[ext_resource type="PackedScene" uid="uid://bm0a1gejtd8mg" path="res://Scene/forniture.tscn" id="2_ltomo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqxe4"]
 size = Vector2(31.25, 14.5)

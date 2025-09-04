@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://5b5bgcsvdd16"
+uid="uid://jbh3gpn2oaiq"
 path="res://.godot/imported/ssvid.net--Footsteps-Sound-Effect-Royalty-Free.mp3-d91ef44963d5310de39ea3010d614d6e.mp3str"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/ssvid.net--Footsteps-Sound-Effect-Royalty-Fre
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
-bpm=0
+bpm=256.0
 beat_count=0
-bar_beats=4
+bar_beats=8
