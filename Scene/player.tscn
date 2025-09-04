@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=4 uid="uid://c87ofyvhdxi7s"]
+[gd_scene load_steps=31 format=4 uid="uid://c87ofyvhdxi7s"]
 
 [ext_resource type="Script" uid="uid://h1yj51g1cop0" path="res://script/player.gd" id="1_3x5gi"]
 [ext_resource type="Texture2D" uid="uid://ccigagpmywj1c" path="res://Image/Character_Profile/tex_support_card_30028.png" id="2_atds7"]
+[ext_resource type="PackedScene" uid="uid://bh0qfu8f8afk2" path="res://Scene/setting_interface_layer.tscn" id="3_xa75v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x5gi"]
 size = Vector2(22.5, 6)
@@ -284,10 +285,11 @@ scale = Vector2(0.210981, 0.210981)
 texture = ExtResource("2_atds7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.25, 28)
+position = Vector2(-1.25, 0)
 shape = SubResource("RectangleShape2D_3x5gi")
 
 [node name="Dialog_interact" type="Area2D" parent="."]
+position = Vector2(0, -28)
 collision_layer = 7
 collision_mask = 0
 
@@ -297,10 +299,13 @@ shape = SubResource("RectangleShape2D_atds7")
 debug_color = Color(0.970405, 0, 0.454941, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -28)
 zoom = Vector2(7, 7)
 
 [node name="Kyoto" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
+position = Vector2(0, -28)
 sprite_frames = SubResource("SpriteFrames_fwcw3")
 animation = &"walk_f"
 metadata/_aseprite_wizard_interface_config_ = {
@@ -324,8 +329,8 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "398763ba3beda6573055a66fabcba9b6"
 
 [node name="Chilfie" type="AnimatedSprite2D" parent="."]
-visible = false
 texture_filter = 1
+position = Vector2(0, -28)
 sprite_frames = SubResource("SpriteFrames_ix2lu")
 animation = &"walk_f"
 metadata/_aseprite_wizard_interface_config_ = {
@@ -347,3 +352,6 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 5513846230377529394
 }
 metadata/_aseprite_wizard_source_file_hash_ = "0494f080dec015f017c90af362de13b3"
+
+[node name="Setting_Interface_Layer" parent="." instance=ExtResource("3_xa75v")]
+visible = false
