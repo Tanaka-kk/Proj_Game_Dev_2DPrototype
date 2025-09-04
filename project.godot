@@ -28,6 +28,10 @@ GlobalVal="*res://script/Global_Val.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+<<<<<<< Updated upstream
+=======
+window/size/mode=3
+>>>>>>> Stashed changes
 
 [dotnet]
 
