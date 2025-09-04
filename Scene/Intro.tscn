@@ -44,9 +44,9 @@ offset_bottom = 199.0
 
 [node name="Label" parent="Character_Dialog_Layer/text_dialog_bag" index="1"]
 offset_left = 38.0
-offset_top = 13.0
+offset_top = 29.0
 offset_right = 1350.0
-offset_bottom = 175.0
+offset_bottom = 191.0
 
 [node name="char_profile" parent="Character_Dialog_Layer/Profile_picture" index="1"]
 scale = Vector2(0.16, 0.144)
